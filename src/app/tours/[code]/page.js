@@ -182,7 +182,7 @@ export default function TourDetail({ params }) {
 
                 {(tour.inclusions?.length > 0 || tour.exclusions?.length > 0) && (
                   <div className="detail-card">
-                    <h2>What's Included</h2>
+                    <h2>What&apos;s Included</h2>
                     <div className="inc-exc-grid">
                       {tour.inclusions?.length > 0 && (
                         <div className="inc-section">
