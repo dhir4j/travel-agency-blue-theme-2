@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import toursData from '../../data/waynex_tours_complete.json'
+import { generateTourSlug, getTourImage } from '@/utils/tourUtils'
 
 export default function Package() {
   // Get featured tours from the JSON data
@@ -21,7 +22,7 @@ export default function Package() {
             <li key={tour.code}>
               <div className="package-card">
                 <figure className="card-banner">
-                  <img src={tour.card_image || tour.slider_images?.[0]} alt={tour.name} loading="lazy" />
+                  <img src={getTourImage(tour)} alt={tour.name} loading="lazy" />
                 </figure>
 
                 <div className="card-content">
@@ -61,7 +62,7 @@ export default function Package() {
                     </div>
                   </div>
                   <p className="price">₹{tour.price?.toLocaleString()} <span>/per person</span></p>
-                  <Link href={`/tours/${tour.code}`} className="btn btn-secondary">View Details</Link>
+                  <Link href={`/tours/${generateTourSlug(tour.name, tour.code)}`} className="btn btn-secondary">View Details</Link>
                 </div>
               </div>
             </li>

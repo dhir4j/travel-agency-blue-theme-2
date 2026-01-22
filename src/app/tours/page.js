@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 import toursData from '../../../data/waynex_tours_complete.json'
+import { generateTourSlug, getTourImage } from '@/utils/tourUtils'
 
 export default function ToursPage() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -18,12 +19,20 @@ export default function ToursPage() {
     const tours = []
     if (toursData.data?.domestic) {
       Object.entries(toursData.data.domestic).forEach(([state, stateTours]) => {
-        stateTours.forEach(tour => tours.push({ ...tour, type: 'domestic', region: state }))
+        stateTours.forEach(tour => {
+          if (tour.code && tour.code.trim() !== '') {
+            tours.push({ ...tour, type: 'domestic', region: state })
+          }
+        })
       })
     }
     if (toursData.data?.international) {
       Object.entries(toursData.data.international).forEach(([region, regionTours]) => {
-        regionTours.forEach(tour => tours.push({ ...tour, type: 'international', region }))
+        regionTours.forEach(tour => {
+          if (tour.code && tour.code.trim() !== '') {
+            tours.push({ ...tour, type: 'international', region })
+          }
+        })
       })
     }
     return tours
@@ -81,11 +90,7 @@ export default function ToursPage() {
       <main>
         <section className="tours-hero-modern">
           <div className="container">
-            <span className="section-subtitle">Explore The World</span>
             <h1 className="h1">Discover Amazing Tours</h1>
-            <p className="hero-text">
-              {toursData.metadata.total_tours} handpicked tours • {toursData.metadata.domestic_tours} domestic • {toursData.metadata.international_tours} international
-            </p>
             <div className="search-bar-modern">
               <ion-icon name="search-outline"></ion-icon>
               <input
@@ -141,9 +146,9 @@ export default function ToursPage() {
                 </div>
               ) : (
                 filteredTours.map((tour) => (
-                  <Link href={`/tours/${tour.code}`} key={tour.code} className="tour-card-premium">
+                  <Link href={`/tours/${generateTourSlug(tour.name, tour.code)}`} key={tour.code} className="tour-card-premium">
                     <div className="tour-image">
-                      <img src={tour.card_image || tour.slider_images?.[0]} alt={tour.name} />
+                      <img src={getTourImage(tour)} alt={tour.name} />
                       <div className="tour-type-badge">{tour.type === 'domestic' ? 'Domestic' : 'International'}</div>
                       <div className="tour-duration-badge">
                         <ion-icon name="time-outline"></ion-icon>
@@ -179,31 +184,8 @@ export default function ToursPage() {
       <GoTop />
 
       <style jsx>{`
-        .tours-hero-modern {
-          background: linear-gradient(135deg, var(--bright-navy-blue) 0%, var(--yale-blue) 100%);
-          padding: 120px 0 80px;
-          text-align: center;
-          color: var(--white);
-        }
-
-        .tours-hero-modern .section-subtitle {
-          color: var(--white);
-          opacity: 0.9;
-        }
-
-        .tours-hero-modern .h1 {
-          color: var(--white);
-          margin: 15px 0;
-        }
-
-        .hero-text {
-          color: var(--white);
-          opacity: 0.9;
-          margin-bottom: 30px;
-        }
-
         .search-bar-modern {
-          max-width: 600px;
+          max-width: 700px;
           margin: 0 auto;
           background: var(--white);
           border-radius: 50px;

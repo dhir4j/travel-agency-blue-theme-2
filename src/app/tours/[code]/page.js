@@ -7,30 +7,41 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 import toursData from '../../../../data/waynex_tours_complete.json'
+import { extractCodeFromSlug, getTourImage } from '@/utils/tourUtils'
+import styles from './tour-detail.module.css'
 
 function findTourByCode(code) {
   const { domestic, international } = toursData.data
-  
+
   for (const region in domestic) {
     const tour = domestic[region].find(t => t.code === code)
     if (tour) return { ...tour, type: 'domestic', region }
   }
-  
+
   for (const region in international) {
     const tour = international[region].find(t => t.code === code)
     if (tour) return { ...tour, type: 'international', region }
   }
-  
+
   return null
 }
 
 export default function TourDetail({ params }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const tour = findTourByCode(params.code)
-  
-  if (!tour) notFound()
 
-  const images = tour.slider_images || [tour.card_image] || []
+  const slug = params.code
+  const code = extractCodeFromSlug(slug)
+  const tour = findTourByCode(code)
+
+  if (!tour) {
+    notFound()
+  }
+
+  const validImages = tour.slider_images?.filter(img =>
+    img && !img.includes('kesari-logo') && !img.startsWith('../')
+  ) || []
+
+  const images = validImages.length > 0 ? validImages : [getTourImage(tour)]
 
   useEffect(() => {
     if (images.length > 1) {
@@ -41,210 +52,222 @@ export default function TourDetail({ params }) {
     }
   }, [images.length])
 
+  const nextSlide = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  }
+
   return (
     <>
       <Header />
       <main>
-        <div className="tour-detail-hero">
-          <div className="hero-slider-detail">
-            {images.map((image, index) => (
-              <img key={index} src={image} alt={tour.name} className={index === currentImageIndex ? 'active' : ''} />
-            ))}
-            {images.length > 1 && (
-              <>
-                <button onClick={() => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)} className="slider-btn-detail prev">
-                  <ion-icon name="chevron-back-outline"></ion-icon>
-                </button>
-                <button onClick={() => setCurrentImageIndex((prev) => (prev + 1) % images.length)} className="slider-btn-detail next">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </button>
-              </>
-            )}
-          </div>
-          <div className="hero-overlay">
-            <div className="container">
-              <div className="breadcrumb">
-                <Link href="/">Home</Link>
-                <span>/</span>
-                <Link href="/tours">Tours</Link>
-                <span>/</span>
-                <span>{tour.name}</span>
-              </div>
-              <h1>{tour.name}</h1>
-              <div className="hero-meta">
-                <div className="meta-item">
-                  <ion-icon name="location-outline"></ion-icon>
-                  <span>{tour.region}</span>
-                </div>
-                <div className="meta-item">
-                  <ion-icon name="time-outline"></ion-icon>
-                  <span>{tour.duration}</span>
-                </div>
-                <div className="meta-item">
-                  <ion-icon name="pricetag-outline"></ion-icon>
-                  <span>₹{tour.price?.toLocaleString()}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section className="tour-detail-content">
+        {/* Hero Section - Matching Visa Page Style */}
+        <section className={styles.heroSection}>
           <div className="container">
-            <div className="detail-layout">
-              <div className="detail-main">
-                <div className="detail-card">
-                  <h2>Tour Overview</h2>
-                  <div className="overview-grid">
-                    <div className="overview-item">
-                      <ion-icon name="navigate-outline"></ion-icon>
-                      <div>
-                        <strong>Destinations</strong>
-                        <p>{tour.destinations}</p>
-                      </div>
+            <div className={styles.heroMediaContainer}>
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={tour.name}
+                  className={`${styles.heroImage} ${index === currentImageIndex ? styles.active : ''}`}
+                />
+              ))}
+
+              {images.length > 1 && (
+                <>
+                  <button onClick={prevSlide} className={`${styles.sliderButton} ${styles.prev}`}>
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                  </button>
+                  <button onClick={nextSlide} className={`${styles.sliderButton} ${styles.next}`}>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </button>
+                </>
+              )}
+
+              <div className={styles.heroContentCentered}>
+                <h1 className={styles.tourTitle}>{tour.name}</h1>
+                <div className={styles.metaInfo}>
+                  <div className={styles.metaItem}>
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span>{tour.region}</span>
+                  </div>
+                  <div className={styles.metaItem}>
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span>{tour.duration}</span>
+                  </div>
+                  <div className={styles.metaItem}>
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                    <span>₹{tour.price?.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content */}
+        <section className={styles.mainContent}>
+          <div className={styles.contentLayout}>
+            <div className={styles.contentMain}>
+              {/* Tour Overview */}
+              <div className={styles.detailCard}>
+                <h2 className={styles.cardTitle}>Tour Overview</h2>
+                <div className={styles.overviewGrid}>
+                  <div className={styles.overviewItem}>
+                    <ion-icon name="navigate-outline" className={styles.overviewIcon}></ion-icon>
+                    <div className={styles.overviewContent}>
+                      <strong className={styles.overviewLabel}>Destinations</strong>
+                      <p className={styles.overviewValue}>{tour.destinations}</p>
                     </div>
-                    <div className="overview-item">
-                      <ion-icon name="calendar-outline"></ion-icon>
-                      <div>
-                        <strong>Duration</strong>
-                        <p>{tour.duration}</p>
-                      </div>
+                  </div>
+                  <div className={styles.overviewItem}>
+                    <ion-icon name="calendar-outline" className={styles.overviewIcon}></ion-icon>
+                    <div className={styles.overviewContent}>
+                      <strong className={styles.overviewLabel}>Duration</strong>
+                      <p className={styles.overviewValue}>{tour.duration}</p>
                     </div>
-                    <div className="overview-item">
-                      <ion-icon name="code-outline"></ion-icon>
-                      <div>
-                        <strong>Tour Code</strong>
-                        <p>{tour.code}</p>
-                      </div>
+                  </div>
+                  <div className={styles.overviewItem}>
+                    <ion-icon name="code-outline" className={styles.overviewIcon}></ion-icon>
+                    <div className={styles.overviewContent}>
+                      <strong className={styles.overviewLabel}>Tour Code</strong>
+                      <p className={styles.overviewValue}>{tour.code}</p>
                     </div>
                   </div>
                 </div>
-
-                {tour.why_tour_with_waynex?.length > 0 && (
-                  <div className="detail-card">
-                    <h2>Why Tour With Waynex?</h2>
-                    <ul className="feature-list">
-                      {tour.why_tour_with_waynex.slice(0, 8).map((item, index) => (
-                        <li key={index}>
-                          <ion-icon name="checkmark-circle"></ion-icon>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {tour.highlights?.length > 0 && (
-                  <div className="detail-card">
-                    <h2>Tour Highlights</h2>
-                    <ul className="highlight-list">
-                      {tour.highlights.map((highlight, index) => (
-                        <li key={index}>
-                          <ion-icon name="star"></ion-icon>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {tour.itinerary?.length > 0 && (
-                  <div className="detail-card">
-                    <h2>Itinerary</h2>
-                    <div className="itinerary-timeline">
-                      {tour.itinerary.map((day, index) => (
-                        <div key={index} className="timeline-item">
-                          <div className="timeline-marker">Day {index + 1}</div>
-                          <div className="timeline-content">{day}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {tour.hotels?.length > 0 && (
-                  <div className="detail-card">
-                    <h2>Accommodation</h2>
-                    <div className="hotels-list">
-                      {tour.hotels.map((hotel, index) => (
-                        <div key={index} className="hotel-item">
-                          <ion-icon name="bed-outline"></ion-icon>
-                          <div>
-                            <strong>{hotel.place}</strong>
-                            <p>{hotel.hotel}</p>
-                            <span className="nights-badge">{hotel.nights} Night(s)</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {(tour.inclusions?.length > 0 || tour.exclusions?.length > 0) && (
-                  <div className="detail-card">
-                    <h2>What&apos;s Included</h2>
-                    <div className="inc-exc-grid">
-                      {tour.inclusions?.length > 0 && (
-                        <div className="inc-section">
-                          <h3><ion-icon name="checkmark-circle"></ion-icon> Inclusions</h3>
-                          <ul>
-                            {tour.inclusions.map((item, index) => (
-                              <li key={index}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {tour.exclusions?.length > 0 && (
-                        <div className="exc-section">
-                          <h3><ion-icon name="close-circle"></ion-icon> Exclusions</h3>
-                          <ul>
-                            {tour.exclusions.map((item, index) => (
-                              <li key={index}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
               </div>
 
-              <aside className="detail-sidebar">
-                <div className="booking-widget">
-                  <div className="price-display">
-                    <span className="from-text">Starting from</span>
-                    <span className="price-amount">₹{tour.price?.toLocaleString()}</span>
-                    <span className="per-person">per person</span>
-                  </div>
-                  <button className="btn btn-primary btn-block">Book Now</button>
-                  <button className="btn btn-secondary btn-block">Send Enquiry</button>
-                  
-                  <div className="quick-info">
-                    <div className="info-row">
-                      <ion-icon name="time-outline"></ion-icon>
-                      <span>{tour.duration}</span>
-                    </div>
-                    <div className="info-row">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span>Group Tour</span>
-                    </div>
-                    <div className="info-row">
-                      <ion-icon name="globe-outline"></ion-icon>
-                      <span>{tour.type === 'domestic' ? 'Domestic' : 'International'}</span>
-                    </div>
+              {/* Why Tour With Waynex */}
+              {tour.why_tour_with_waynex?.length > 0 && (
+                <div className={styles.detailCard}>
+                  <h2 className={styles.cardTitle}>Why Tour With Waynex?</h2>
+                  <div className={styles.featureList}>
+                    {tour.why_tour_with_waynex.slice(0, 8).map((item, index) => (
+                      <div key={index} className={styles.featureItem}>
+                        <ion-icon name="checkmark-circle" className={styles.featureIcon}></ion-icon>
+                        <span>{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
+              )}
 
-                <div className="help-widget">
-                  <h3>Need Help?</h3>
-                  <p>Our travel experts are here to assist you</p>
-                  <a href="tel:+11234567890" className="help-link">
-                    <ion-icon name="call-outline"></ion-icon>
-                    +1 (123) 456 7890
-                  </a>
+              {/* Highlights */}
+              {tour.highlights?.length > 0 && (
+                <div className={styles.detailCard}>
+                  <h2 className={styles.cardTitle}>Tour Highlights</h2>
+                  <div className={styles.featureList}>
+                    {tour.highlights.map((highlight, index) => (
+                      <div key={index} className={styles.featureItem}>
+                        <ion-icon name="star" className={styles.featureIcon}></ion-icon>
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </aside>
+              )}
+
+              {/* Hotels */}
+              {tour.hotels?.length > 0 && (
+                <div className={styles.detailCard}>
+                  <h2 className={styles.cardTitle}>Accommodation</h2>
+                  <div className={styles.hotelsList}>
+                    {tour.hotels.map((hotel, index) => (
+                      <div key={index} className={styles.hotelItem}>
+                        <ion-icon name="bed-outline" className={styles.hotelIcon}></ion-icon>
+                        <div className={styles.hotelInfo}>
+                          <div className={styles.hotelPlace}>{hotel.place}</div>
+                          <div className={styles.hotelName}>{hotel.hotel}</div>
+                          <span className={styles.nightsBadge}>{hotel.nights} Night(s)</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Inclusions/Exclusions */}
+              {(tour.inclusions?.length > 0 || tour.exclusions?.length > 0) && (
+                <div className={styles.detailCard}>
+                  <h2 className={styles.cardTitle}>What&apos;s Included</h2>
+                  {tour.inclusions?.length > 0 && (
+                    <div style={{ marginBottom: tour.exclusions?.length > 0 ? '24px' : '0' }}>
+                      <h3 style={{ color: 'hsl(208, 97%, 12%)', fontSize: '18px', fontWeight: '600', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <ion-icon name="checkmark-circle" style={{ color: 'hsl(214, 57%, 51%)', fontSize: '24px' }}></ion-icon>
+                        Inclusions
+                      </h3>
+                      <div className={styles.featureList}>
+                        {tour.inclusions.map((item, index) => (
+                          <div key={index} className={styles.featureItem}>
+                            <ion-icon name="checkmark" className={styles.featureIcon}></ion-icon>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {tour.exclusions?.length > 0 && (
+                    <div>
+                      <h3 style={{ color: 'hsl(208, 97%, 12%)', fontSize: '18px', fontWeight: '600', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <ion-icon name="close-circle" style={{ color: '#e74c3c', fontSize: '24px' }}></ion-icon>
+                        Exclusions
+                      </h3>
+                      <div className={styles.featureList}>
+                        {tour.exclusions.map((item, index) => (
+                          <div key={index} className={styles.featureItem}>
+                            <ion-icon name="close" style={{ color: '#e74c3c' }} className={styles.featureIcon}></ion-icon>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
+
+            {/* Sidebar */}
+            <aside className={styles.sidebar}>
+              <div className={styles.priceCard}>
+                <div className={styles.priceDisplay}>
+                  <span className={styles.priceLabel}>Starting from</span>
+                  <span className={styles.priceAmount}>₹{tour.price?.toLocaleString()}</span>
+                  <span className={styles.priceSubtext}>per person</span>
+                </div>
+                <Link href={`/tours/${slug}/book`} className={`${styles.ctaButton} ${styles.primaryButton}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  Book Now
+                </Link>
+                <button className={`${styles.ctaButton} ${styles.secondaryButton}`}>Send Enquiry</button>
+
+                <div className={styles.quickInfo}>
+                  <div className={styles.infoRow}>
+                    <ion-icon name="time-outline" className={styles.infoIcon}></ion-icon>
+                    <span>{tour.duration}</span>
+                  </div>
+                  <div className={styles.infoRow}>
+                    <ion-icon name="people-outline" className={styles.infoIcon}></ion-icon>
+                    <span>Group Tour</span>
+                  </div>
+                  <div className={styles.infoRow}>
+                    <ion-icon name="globe-outline" className={styles.infoIcon}></ion-icon>
+                    <span>{tour.type === 'domestic' ? 'Domestic' : 'International'}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.helpCard}>
+                <h3 className={styles.helpTitle}>Need Help?</h3>
+                <p className={styles.helpText}>Our travel experts are here to assist you</p>
+                <a href="tel:+11234567890" className={styles.helpLink}>
+                  <ion-icon name="call-outline"></ion-icon>
+                  +1 (123) 456 7890
+                </a>
+              </div>
+            </aside>
           </div>
         </section>
       </main>

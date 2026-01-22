@@ -1,4 +1,7 @@
+/* Waynex Tours - Updated Styles v4.0 - FINAL UI FIX */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+/* Force CSS Reload - Last Updated: 2025-01-22 */
 
 :root {
     --united-nations-blue: hsl(214, 56%, 58%);
@@ -52,14 +55,27 @@ a, img, span, input, label, button, ion-icon { display: block; }
 /* Tour Detail Page Styles */
 .tour-detail-hero {
   position: relative;
-  height: 70vh;
-  min-height: 500px;
+  height: 60vh;
+  min-height: 450px;
+  margin-bottom: 80px;
 }
 
 .hero-slider-detail {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.hero-slider-detail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-slider-detail img {
@@ -91,7 +107,7 @@ a, img, span, input, label, button, ion-icon { display: block; }
   justify-content: center;
   cursor: pointer;
   transition: var(--transition);
-  z-index: 10;
+  z-index: 15;
 }
 
 .slider-btn-detail:hover {
@@ -109,19 +125,21 @@ a, img, span, input, label, button, ion-icon { display: block; }
 
 .hero-overlay {
   position: absolute;
-  bottom: 0;
+  bottom: -60px;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.85));
-  padding: 60px 0 30px;
+  background: var(--bright-navy-blue);
+  padding: 30px 0;
   color: var(--white);
+  z-index: 20;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .breadcrumb {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
 }
 
@@ -136,13 +154,15 @@ a, img, span, input, label, button, ion-icon { display: block; }
 
 .hero-overlay h1 {
   color: var(--white);
-  font-size: var(--fs-1);
-  margin-bottom: 15px;
+  font-size: var(--fs-2);
+  margin-bottom: 10px;
+  font-weight: var(--fw-700);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-meta {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
@@ -150,11 +170,12 @@ a, img, span, input, label, button, ion-icon { display: block; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 14px;
+  opacity: 0.95;
 }
 
 .meta-item ion-icon {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .tour-detail-content {
@@ -170,48 +191,67 @@ a, img, span, input, label, button, ion-icon { display: block; }
 
 .detail-card {
   background: var(--white);
-  border-radius: var(--radius-25);
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border-radius: var(--radius-15);
+  padding: 35px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .detail-card h2 {
   color: var(--oxford-blue);
-  font-size: var(--fs-2);
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 3px solid var(--bright-navy-blue);
+  font-size: calc(20px + 0.5vw);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--bright-navy-blue);
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .overview-grid {
   display: grid;
-  gap: 20px;
+  gap: 15px;
 }
 
 .overview-item {
   display: flex;
-  gap: 15px;
-  padding: 15px;
-  background: var(--cultured);
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(74, 144, 226, 0.02) 100%);
   border-radius: var(--radius-15);
+  border-left: 4px solid var(--bright-navy-blue);
+  transition: var(--transition);
+  align-items: flex-start;
+}
+
+.overview-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
 }
 
 .overview-item ion-icon {
   font-size: 28px;
   color: var(--bright-navy-blue);
   flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.overview-item > div {
+  flex: 1;
 }
 
 .overview-item strong {
   display: block;
   color: var(--oxford-blue);
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .overview-item p {
   color: var(--black-coral);
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .feature-list {
@@ -223,17 +263,23 @@ a, img, span, input, label, button, ion-icon { display: block; }
 .feature-list li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 12px;
+  gap: 12px;
+  padding: 14px 16px;
   background: var(--cultured);
   border-radius: var(--radius-15);
+  transition: var(--transition);
+}
+
+.feature-list li:hover {
+  background: rgba(74, 144, 226, 0.05);
+  transform: translateX(3px);
 }
 
 .feature-list ion-icon {
   color: var(--blue-ncs);
   font-size: 20px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .highlight-list {
@@ -305,15 +351,17 @@ a, img, span, input, label, button, ion-icon { display: block; }
 
 .hotel-item {
   display: flex;
-  gap: 15px;
+  gap: 16px;
   padding: 20px;
   background: var(--cultured);
   border-radius: var(--radius-15);
+  align-items: flex-start;
 }
 
 .hotel-item ion-icon {
-  font-size: 32px;
+  font-size: 28px;
   color: var(--bright-navy-blue);
+  margin-top: 2px;
   flex-shrink: 0;
 }
 
@@ -402,81 +450,97 @@ a, img, span, input, label, button, ion-icon { display: block; }
 
 .booking-widget {
   background: var(--white);
-  border-radius: var(--radius-25);
-  padding: 30px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  border-radius: var(--radius-15);
+  padding: 25px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
   margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .price-display {
   text-align: center;
-  padding: 20px;
-  background: linear-gradient(135deg, var(--bright-navy-blue), var(--yale-blue));
+  padding: 25px 20px;
+  background: linear-gradient(135deg, var(--bright-navy-blue) 0%, var(--yale-blue) 100%);
   border-radius: var(--radius-15);
   margin-bottom: 20px;
   color: var(--white);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
 }
 
 .from-text {
   display: block;
-  font-size: 14px;
-  opacity: 0.9;
-  margin-bottom: 5px;
+  font-size: 13px;
+  opacity: 0.95;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .price-amount {
   display: block;
-  font-size: 36px;
-  font-weight: var(--fw-700);
-  margin-bottom: 5px;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  font-family: var(--ff-montserrat);
 }
 
 .per-person {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
+  font-weight: 400;
 }
 
 .btn-block {
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .quick-info {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid var(--gainsboro);
+  border-top: 2px solid var(--gainsboro);
 }
 
 .info-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 0;
+  padding: 12px 0;
   color: var(--black-coral);
+  font-size: 14px;
 }
 
 .info-row ion-icon {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--bright-navy-blue);
 }
 
 .help-widget {
-  background: var(--cultured);
-  border-radius: var(--radius-25);
-  padding: 25px;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(74, 144, 226, 0.02) 100%);
+  border-radius: var(--radius-15);
+  padding: 30px 25px;
   text-align: center;
+  border: 1px solid rgba(74, 144, 226, 0.1);
 }
 
 .help-widget h3 {
   color: var(--oxford-blue);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: var(--fw-700);
 }
 
 .help-widget p {
   color: var(--spanish-gray);
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  line-height: 1.5;
 }
 
 .help-link {
@@ -486,40 +550,120 @@ a, img, span, input, label, button, ion-icon { display: block; }
   gap: 10px;
   background: var(--bright-navy-blue);
   color: var(--white);
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: var(--radius-15);
   font-weight: var(--fw-600);
   transition: var(--transition);
+  box-shadow: 0 3px 12px rgba(74, 144, 226, 0.3);
 }
 
 .help-link:hover {
   background: var(--yale-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
 }
 
 @media (max-width: 992px) {
   .detail-layout {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
+
   .detail-sidebar {
     position: static;
   }
-  
+
   .inc-exc-grid {
     grid-template-columns: 1fr;
   }
-  
+
+  .tour-detail-hero {
+    height: 50vh;
+    min-height: 400px;
+    margin-bottom: 60px;
+  }
+
+  .hero-overlay {
+    bottom: -50px;
+    padding: 25px 0;
+  }
+
+  .hero-overlay h1 {
+    font-size: calc(18px + 1vw);
+  }
+
   .hero-meta {
     gap: 15px;
   }
-  
+
   .slider-btn-detail {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
-  
+
+  .slider-btn-detail ion-icon {
+    font-size: 20px;
+  }
+
   .slider-btn-detail.prev { left: 10px; }
   .slider-btn-detail.next { right: 10px; }
+
+  .detail-card {
+    padding: 25px 20px;
+    margin-bottom: 24px;
+  }
+
+  .detail-card h2 {
+    font-size: calc(18px + 0.5vw);
+    margin-bottom: 20px;
+  }
+
+  .overview-item {
+    padding: 16px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+  }
+
+  .booking-widget {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-detail-hero {
+    height: 40vh;
+    min-height: 350px;
+  }
+
+  .hero-overlay h1 {
+    font-size: calc(16px + 1vw);
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .detail-card {
+    padding: 20px 16px;
+  }
+
+  .overview-item {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .overview-item ion-icon {
+    font-size: 24px;
+  }
+
+  .btn-block {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
 }
     input, button { background: none; border: none; font: inherit; }
     button { cursor: pointer; }
@@ -528,11 +672,11 @@ a, img, span, input, label, button, ion-icon { display: block; }
 html { font-family: var(--ff-poppins); scroll-behavior: smooth; }
 body { background: var(--white); }
 .container { padding-inline: 15px; }
-.btn { color: var(--white); text-transform: uppercase; font-size: var(--fs-5); border-radius: 100px; padding: 8px 18px; border: 2px solid transparent; transition: var(--transition); }
-.btn-primary { background: var(--bright-navy-blue); border-color: var(--bright-navy-blue); }
-    .btn-primary:is(:hover, :focus) { background: var(--yale-blue); border-color: var(--yale-blue); }
-.btn-secondary { border-color: var(--white); }
-    .btn-secondary:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
+.btn { color: var(--white); text-transform: uppercase; font-size: var(--fs-5); border-radius: 100px; padding: 10px 24px; border: 2px solid transparent; transition: var(--transition); font-weight: 600; letter-spacing: 0.5px; line-height: 1.5; }
+.btn-primary { background: var(--bright-navy-blue); border-color: var(--bright-navy-blue); box-shadow: 0 3px 12px rgba(74, 144, 226, 0.3); }
+    .btn-primary:is(:hover, :focus) { background: var(--yale-blue); border-color: var(--yale-blue); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4); }
+.btn-secondary { border-color: var(--bright-navy-blue); color: var(--bright-navy-blue); background: transparent; }
+    .btn-secondary:is(:hover, :focus) { background: var(--bright-navy-blue); color: var(--white); transform: translateY(-2px); }
 .h1, .h2, .h3 { font-weight: var(--fw-700); font-family: var(--ff-montserrat); text-transform: uppercase; }
     .h1 { color: var(--white); font-size: var(--fs-1); }
     .h2, .h3 { color: var(--gunmetal); }
@@ -689,6 +833,8 @@ header { position: absolute; top: 0; left: 0; width: 100%; padding-top: 61px; z-
         .package-card .card-rating ion-icon:last-child { color: hsl(0, 0%, 80%); }
     .package-card .price { font-size: var(--fs-2); font-family: var(--ff-montserrat); font-weight: var(--fw-800); margin-bottom: 20px; }
         .package-card .price span { font-size: var(--fs-7); font-weight: initial; }
+    .package-card .card-price .btn-secondary { border-color: var(--white); color: var(--white); }
+        .package-card .card-price .btn-secondary:is(:hover, :focus) { background: var(--white); color: var(--united-nations-blue); }
 .card-meta-list {
     background: var(--white);
     max-width: max-content;
@@ -972,6 +1118,62 @@ header { position: absolute; top: 0; left: 0; width: 100%; padding-top: 61px; z-
         .visa-card .price { font-size: var(--fs-3); font-weight: var(--fw-800); color: var(--bright-navy-blue); }
         .btn-link { color: var(--bright-navy-blue); font-weight: var(--fw-600); transition: var(--transition); }
             .btn-link:hover { color: var(--yale-blue); }
+
+/* Tours Page Styles */
+
+/* Tours Hero with Search - Matching Visa Page Design */
+.tours-hero-modern {
+    background-image: url('https://i.postimg.cc/D0c2FLPM/hero-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, .7);
+    background-blend-mode: overlay;
+    padding: 180px 0 100px;
+    text-align: center;
+    color: var(--white);
+}
+
+.tours-hero-modern .container {
+    max-width: 1400px;
+    padding-inline: 40px;
+}
+
+.tours-hero-modern .h1 {
+    margin-bottom: 40px;
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.search-bar-modern {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 8px 12px 8px 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-modern ion-icon {
+    font-size: 24px;
+    color: hsl(214, 57%, 51%);
+    margin-right: 12px;
+}
+
+.search-bar-modern input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 12px;
+    background: transparent;
+    color: hsl(208, 97%, 12%);
+}
+
+.search-bar-modern input::placeholder {
+    color: hsl(225, 8%, 62%);
+}
 
 /* Visa Page Styles */
 
@@ -2165,23 +2367,15 @@ header { position: absolute; top: 0; left: 0; width: 100%; padding-top: 61px; z-
 /* Visa Application Form - Updated Theme */
 
 .application-hero {
-    background: linear-gradient(135deg, var(--bright-navy-blue) 0%, var(--yale-blue) 100%);
+    background-image: url('https://i.postimg.cc/D0c2FLPM/hero-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, .7);
+    background-blend-mode: overlay;
     padding: 180px 0 100px;
     text-align: center;
     color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
-
-.application-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-    opacity: 0.5;
 }
 
 .application-hero-content {
@@ -2780,6 +2974,38 @@ header { position: absolute; top: 0; left: 0; width: 100%; padding-top: 61px; z-
         flex-direction: column;
         text-align: center;
     }
+
+    .tours-hero-modern {
+        padding: 140px 0 80px;
+    }
+
+    .tours-hero-modern .container {
+        padding-inline: 30px;
+    }
+
+    .tours-hero-modern .h1 {
+        font-size: 36px;
+    }
+
+    .visa-hero-modern {
+        padding: 140px 0 80px;
+    }
+
+    .visa-hero-modern .container {
+        padding-inline: 30px;
+    }
+
+    .visa-hero-modern .hero-title {
+        font-size: 36px;
+    }
+
+    .application-hero {
+        padding: 140px 0 80px;
+    }
+
+    .application-hero-title {
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2805,5 +3031,39 @@ header { position: absolute; top: 0; left: 0; width: 100%; padding-top: 61px; z-
 
     .price-amount {
         font-size: 32px;
+    }
+
+    .tours-hero-modern {
+        padding: 120px 0 60px;
+    }
+
+    .tours-hero-modern .container {
+        padding-inline: 20px;
+    }
+
+    .tours-hero-modern .h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .visa-hero-modern {
+        padding: 120px 0 60px;
+    }
+
+    .visa-hero-modern .container {
+        padding-inline: 20px;
+    }
+
+    .visa-hero-modern .hero-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .application-hero {
+        padding: 120px 0 60px;
+    }
+
+    .application-hero-title {
+        font-size: 28px;
     }
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import { notFound } from 'next/navigation'
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -9,20 +8,6 @@ import GoTop from '@/components/GoTop'
 import visaData from '../../../../data/data.json'
 
 export default function CountryVisaPage({ params }) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  // Prevent background scroll when modal is open
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [isModalOpen])
   const countrySlug = params.country
   const visaInfo = visaData.find(
     (visa) => visa.Country.toLowerCase().replace(/\s+/g, '-') === countrySlug
@@ -81,7 +66,7 @@ export default function CountryVisaPage({ params }) {
                     <span>Visa Guaranteed in {visaInfo['Get on']}</span>
                   </div>
                   <div className="hero-cta-wrapper">
-                    <button className="btn btn-primary btn-hero-cta" onClick={() => setIsModalOpen(true)}>Apply Now</button>
+                    <Link href={`/visa/apply?country=${visaInfo.Country}`} className="btn btn-primary btn-hero-cta">Apply Now</Link>
                   </div>
                 </div>
               </div>
@@ -243,7 +228,7 @@ export default function CountryVisaPage({ params }) {
                       <p className="price-label">TO BE PAID NOW</p>
                     </div>
 
-                    <button className="btn-start-application" onClick={() => setIsModalOpen(true)}>Start Application</button>
+                    <Link href={`/visa/apply?country=${visaInfo.Country}`} className="btn-start-application">Start Application</Link>
 
                     <div className="payment-breakdown">
                       <div className="payment-item">
@@ -282,149 +267,6 @@ export default function CountryVisaPage({ params }) {
 
       <Footer />
       <GoTop />
-
-      {/* Application Form Modal */}
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h2 className="modal-title">Apply for {visaInfo.Country} Visa</h2>
-              <button className="modal-close" onClick={() => setIsModalOpen(false)}>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <div className="modal-body">
-              <form className="visa-application-form-popup">
-                {/* Personal Information */}
-                <div className="form-section-popup">
-                  <h3 className="section-heading-popup">Personal Information</h3>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="field-label">First Name *</label>
-                      <input type="text" className="form-input" placeholder="Enter first name" required />
-                    </div>
-                    <div className="form-group">
-                      <label className="field-label">Last Name *</label>
-                      <input type="text" className="form-input" placeholder="Enter last name" required />
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="field-label">Email Address *</label>
-                      <input type="email" className="form-input" placeholder="Enter email" required />
-                    </div>
-                    <div className="form-group">
-                      <label className="field-label">Phone Number *</label>
-                      <input type="tel" className="form-input" placeholder="Enter phone number" required />
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="field-label">Date of Birth *</label>
-                      <input type="date" className="form-input" required />
-                    </div>
-                    <div className="form-group">
-                      <label className="field-label">Nationality *</label>
-                      <input type="text" className="form-input" placeholder="Enter nationality" required />
-                    </div>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="field-label">Passport Number *</label>
-                      <input type="text" className="form-input" placeholder="Enter passport number" required />
-                    </div>
-                    <div className="form-group">
-                      <label className="field-label">Passport Expiry Date *</label>
-                      <input type="date" className="form-input" required />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Travel Information */}
-                <div className="form-section-popup">
-                  <h3 className="section-heading-popup">Travel Information</h3>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="field-label">Travel Date *</label>
-                      <input type="date" className="form-input" required />
-                    </div>
-                    <div className="form-group">
-                      <label className="field-label">Purpose of Visit *</label>
-                      <select className="form-select" required>
-                        <option value="">Select purpose</option>
-                        <option value="tourism">Tourism</option>
-                        <option value="business">Business</option>
-                        <option value="education">Education</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Document Upload */}
-                <div className="form-section-popup">
-                  <h3 className="section-heading-popup">Required Documents</h3>
-
-                  <div className="form-group">
-                    <label className="field-label">Passport Copy *</label>
-                    <input type="file" className="form-file" accept=".pdf,.jpg,.jpeg,.png" />
-                  </div>
-
-                  <div className="form-group">
-                    <label className="field-label">Photograph *</label>
-                    <input type="file" className="form-file" accept=".jpg,.jpeg,.png" />
-                  </div>
-
-                  {visaInfo['Required Docs'] && visaInfo['Required Docs'].length > 0 && (
-                    <div className="upload-note">
-                      <p><strong>Additional Required Documents:</strong></p>
-                      <ul>
-                        {visaInfo['Required Docs'].slice(0, 3).map((doc, index) => (
-                          <li key={index}>{doc}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
-                {/* Form Actions */}
-                <div className="form-actions-popup">
-                  <div className="modal-summary">
-                    <div className="summary-item">
-                      <span>Destination:</span>
-                      <strong>{visaInfo.Country}</strong>
-                    </div>
-                    <div className="summary-item">
-                      <span>Processing Time:</span>
-                      <strong>{visaInfo['Get on']}</strong>
-                    </div>
-                    <div className="summary-item">
-                      <span>Total Amount:</span>
-                      <strong className="price-highlight">{visaInfo.Price}</strong>
-                    </div>
-                  </div>
-
-                  <div className="checkbox-label">
-                    <input type="checkbox" required />
-                    <span>I agree to the <a href="#">terms and conditions</a></span>
-                  </div>
-
-                  <div className="submit-buttons">
-                    <button type="button" className="btn-cancel" onClick={() => setIsModalOpen(false)}>Cancel</button>
-                    <button type="submit" className="submit-btn">Submit Application</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   )
 }
