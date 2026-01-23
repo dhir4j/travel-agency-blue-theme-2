@@ -280,7 +280,7 @@ function CheckoutForm() {
             )}
 
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
       <GoTop />
