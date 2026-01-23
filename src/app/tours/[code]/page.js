@@ -236,7 +236,9 @@ export default function TourDetail({ params }) {
                 <Link href={`/tours/${slug}/book`} className={`${styles.ctaButton} ${styles.primaryButton}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   Book Now
                 </Link>
-                <button className={`${styles.ctaButton} ${styles.secondaryButton}`}>Send Enquiry</button>
+                <Link href={`/contact?inquiry=${encodeURIComponent(`Tour Inquiry: ${tour.name} (${tour.code}) - ${tour.duration}`)}`} className={`${styles.ctaButton} ${styles.secondaryButton}`} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  Send Enquiry
+                </Link>
 
                 <div className={styles.quickInfo}>
                   <div className={styles.infoRow}>

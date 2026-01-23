@@ -1,9 +1,20 @@
 'use client'
 
+import { useState } from 'react'
+
 export default function Footer() {
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [email, setEmail] = useState('')
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle newsletter subscription
+    setIsSubscribed(true)
+    setEmail('')
+
+    // Reset the success message after 5 seconds
+    setTimeout(() => {
+      setIsSubscribed(false)
+    }, 5000)
   }
 
   return (
@@ -15,7 +26,7 @@ export default function Footer() {
               <span className="logo-waynex-blue">CrossMap</span>
             </a>
 
-            <p className="footer-text">Your passport to adventure awaits with CrossMap Visa Consultants LLP!</p>
+            <p className="footer-text">Your passport to adventure awaits with CrossMap Visa Consultants LLP</p>
           </div>
 
           <div className="footer-contact">
@@ -43,10 +54,33 @@ export default function Footer() {
           <div className="footer-form">
             <p className="form-text">Subscribe to our newsletter for more update & news!!</p>
 
-            <form onSubmit={handleSubmit} className="form-wrapper">
-              <input type="email" name="email" className="input-field" placeholder="Enter your email" required />
-              <button type="submit" className="btn btn-secondary">Subscribe</button>
-            </form>
+            {isSubscribed ? (
+              <div style={{
+                background: '#d4edda',
+                color: '#155724',
+                padding: '15px 20px',
+                borderRadius: '8px',
+                textAlign: 'center',
+                border: '1px solid #c3e6cb',
+                animation: 'fadeIn 0.3s ease-in'
+              }}>
+                <ion-icon name="checkmark-circle-outline" style={{ fontSize: '24px', marginRight: '8px', verticalAlign: 'middle' }}></ion-icon>
+                <span style={{ verticalAlign: 'middle', fontWeight: '600' }}>Thank you for subscribing!</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="form-wrapper">
+                <input
+                  type="email"
+                  name="email"
+                  className="input-field"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button type="submit" className="btn btn-secondary">Subscribe</button>
+              </form>
+            )}
           </div>
         </div>
       </div>
