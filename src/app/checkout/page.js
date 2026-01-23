@@ -71,7 +71,17 @@ function CheckoutForm() {
   return (
     <>
       <Header />
-      <main style={{ padding: '100px 0 50px', background: '#f8f9fa' }}>
+      <main>
+        <section className="tours-hero-modern">
+          <div className="container">
+            <h1 className="h1">Secure Checkout</h1>
+            <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95' }}>
+              Complete your booking with secure UPI payment
+            </p>
+          </div>
+        </section>
+
+        <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             
@@ -174,8 +184,8 @@ function CheckoutForm() {
                     src="/qrcode.png" 
                     alt="UPI QR Code" 
                     style={{ 
-                      width: '300px', 
-                      height: '300px', 
+                      width: '350px', 
+                      height: '350px', 
                       border: '2px solid #ddd', 
                       borderRadius: '12px',
                       display: 'block',
