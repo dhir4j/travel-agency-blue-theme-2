@@ -231,7 +231,17 @@ export default function TaxiPage() {
                             <button 
                               className="btn btn-secondary"
                               style={{ marginTop: '10px', padding: '8px 16px' }}
-                              onClick={() => window.location.href = '/contact?inquiry=' + encodeURIComponent(`Taxi Booking Request:\nFrom: ${selectedPickup.name}\nTo: ${selectedDropoff.name}\nVehicle: ${taxi.category}\nPrice: ₹${Math.round(parseFloat(taxi.price.amount) * 83)}`)}
+                              onClick={() => {
+                                const bookingData = {
+                                  pickup: selectedPickup.name,
+                                  dropoff: selectedDropoff.name,
+                                  vehicle: taxi.category,
+                                  price: Math.round(parseFloat(taxi.price.amount) * 83),
+                                  date: pickupDate,
+                                  time: pickupTime
+                                }
+                                window.location.href = `/checkout?type=taxi&data=${encodeURIComponent(JSON.stringify(bookingData))}`
+                              }}
                             >
                               Book Now
                             </button>

@@ -71,8 +71,15 @@ function BookingFormContent({ code }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Booking submitted:', formData)
-    alert('Thank you for your booking! We will contact you shortly.')
+    const bookingData = {
+      name: tour.name,
+      duration: tour.duration,
+      destinations: tour.destinations,
+      price: tour.price,
+      travelers: formData.travelers,
+      travelDate: formData.travelDate
+    }
+    window.location.href = `/checkout?type=tour&data=${encodeURIComponent(JSON.stringify(bookingData))}`
   }
 
   return (

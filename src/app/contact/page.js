@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
-export default function ContactPage() {
+function ContactForm() {
+  const searchParams = useSearchParams()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +16,17 @@ export default function ContactPage() {
     message: ''
   })
 
+  useEffect(() => {
+    const inquiry = searchParams.get('inquiry')
+    if (inquiry) {
+      setFormData(prev => ({
+        ...prev,
+        message: decodeURIComponent(inquiry),
+        subject: inquiry.includes('Taxi Booking') ? 'Taxi Booking Request' : 'Tour Inquiry'
+      }))
+    }
+  }, [searchParams])
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -21,11 +34,42 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('')
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    alert('Thank you for contacting us! We will get back to you soon.')
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+    setIsSubmitting(true)
+    setSubmitStatus('')
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(formData.subject || 'Contact Form Submission')
+      const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+---
+Sent from CrossMap Travels website contact form
+      `)
+      
+      // Open email client
+      window.location.href = `mailto:info@crossmaptravels.com?subject=${subject}&body=${body}`
+      
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+      
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    }
+    
+    setIsSubmitting(false)
   }
 
   return (
@@ -336,12 +380,44 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button type="submit" className="btn btn-primary" style={{
-                    width: '100%',
-                    padding: '15px',
-                    fontSize: '1.1rem'
-                  }}>
-                    Send Message
+                  {submitStatus === 'success' && (
+                    <div style={{
+                      background: '#d4edda',
+                      color: '#155724',
+                      padding: '15px',
+                      borderRadius: '8px',
+                      marginBottom: '20px',
+                      border: '1px solid #c3e6cb'
+                    }}>
+                      Thank you! Your message has been sent. We&apos;ll get back to you soon.
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div style={{
+                      background: '#f8d7da',
+                      color: '#721c24',
+                      padding: '15px',
+                      borderRadius: '8px',
+                      marginBottom: '20px',
+                      border: '1px solid #f5c6cb'
+                    }}>
+                      There was an error sending your message. Please try again or contact us directly.
+                    </div>
+                  )}
+
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary" 
+                    disabled={isSubmitting}
+                    style={{
+                      width: '100%',
+                      padding: '15px',
+                      fontSize: '1.1rem',
+                      opacity: isSubmitting ? 0.7 : 1
+                    }}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
@@ -381,5 +457,13 @@ export default function ContactPage() {
       <Footer />
       <GoTop />
     </>
+  )
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactForm />
+    </Suspense>
   )
 }
