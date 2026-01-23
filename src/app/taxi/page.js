@@ -103,7 +103,7 @@ export default function TaxiPage() {
                 <div style={{ 
                   display: 'grid', 
                   gap: taxiResults.length > 0 ? '15px' : '20px', 
-                  gridTemplateColumns: taxiResults.length > 0 ? 'repeat(auto-fit, minmax(180px, 1fr))' : '1fr',
+                  gridTemplateColumns: '1fr',
                   marginBottom: taxiResults.length > 0 ? '20px' : '30px' 
                 }}>
                   <div style={{ position: 'relative' }}>
