@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
@@ -13,7 +13,19 @@ export default function TaxiPage() {
   const [selectedPickup, setSelectedPickup] = useState(null)
   const [selectedDropoff, setSelectedDropoff] = useState(null)
   const [taxiResults, setTaxiResults] = useState([])
+  const [pickupDate, setPickupDate] = useState('')
+  const [pickupTime, setPickupTime] = useState('')
+  const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+
+  // Set default date and time on component mount
+  useEffect(() => {
+    const now = new Date()
+    const today = now.toISOString().split('T')[0]
+    const currentTime = now.toTimeString().split(' ')[0].substring(0, 5)
+    setPickupDate(today)
+    setPickupTime(currentTime)
+  }, [])
 
   const searchLocations = async (query, setSuggestions) => {
     if (query.length < 2) return
@@ -41,11 +53,12 @@ export default function TaxiPage() {
   }
 
   const searchTaxis = async () => {
-    if (!selectedPickup || !selectedDropoff) return
+    if (!selectedPickup || !selectedDropoff || !pickupDate || !pickupTime) return
     
     setLoading(true)
+    setError('')
     try {
-      const response = await fetch(`https://booking-com15.p.rapidapi.com/api/v1/taxi/searchTaxi?pick_up_place_id=${selectedPickup.googlePlaceId}&drop_off_place_id=${selectedDropoff.googlePlaceId}&currency_code=INR`, {
+      const response = await fetch(`https://booking-com15.p.rapidapi.com/api/v1/taxi/searchTaxi?pick_up_place_id=${selectedPickup.googlePlaceId}&drop_off_place_id=${selectedDropoff.googlePlaceId}&pick_up_date=${pickupDate}&pick_up_time=${pickupTime}&currency_code=INR`, {
         headers: {
           'x-rapidapi-host': 'booking-com15.p.rapidapi.com',
           'x-rapidapi-key': '953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
@@ -56,9 +69,14 @@ export default function TaxiPage() {
       
       if (data.status && data.data?.results) {
         setTaxiResults(data.data.results)
+      } else {
+        setError(data.data?.message || 'No taxis available for this route and time. Please try different locations or time.')
+        setTaxiResults([])
       }
     } catch (error) {
       console.error('Error searching taxis:', error)
+      setError('Failed to search taxis. Please try again.')
+      setTaxiResults([])
     }
     setLoading(false)
   }
@@ -146,11 +164,39 @@ export default function TaxiPage() {
                       </div>
                     )}
                   </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                    <div>
+                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Pickup Date</label>
+                      <input
+                        type="date"
+                        value={pickupDate}
+                        onChange={(e) => setPickupDate(e.target.value)}
+                        min={new Date().toISOString().split('T')[0]}
+                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Pickup Time</label>
+                      <input
+                        type="time"
+                        value={pickupTime}
+                        onChange={(e) => setPickupTime(e.target.value)}
+                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
+                      />
+                    </div>
+                  </div>
                 </div>
+
+                {error && (
+                  <div style={{ background: '#fee', color: '#c33', padding: '15px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #fcc' }}>
+                    {error}
+                  </div>
+                )}
 
                 <button
                   onClick={searchTaxis}
-                  disabled={!selectedPickup || !selectedDropoff || loading}
+                  disabled={!selectedPickup || !selectedDropoff || !pickupDate || !pickupTime || loading}
                   className="btn btn-primary"
                   style={{ width: '100%', padding: '15px' }}
                 >

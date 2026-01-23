@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import TourSearch from '@/components/TourSearch'
 import Popular from '@/components/Popular'
 import Package from '@/components/Package'
 import Gallery from '@/components/Gallery'
@@ -16,7 +15,6 @@ export default function Home() {
       <main>
         <article>
           <Hero />
-          <TourSearch />
           <Popular />
           <Package />
           <Gallery />
