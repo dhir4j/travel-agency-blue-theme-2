@@ -9,8 +9,8 @@ export default function Hero() {
         </p>
 
         <div className="btn-group">
-          <button className="btn btn-primary">Learn More</button>
-          <button className="btn btn-secondary">Book Now</button>
+          <a href="/about" className="btn btn-primary">Learn More</a>
+          <a href="/tours" className="btn btn-secondary">Book Now</a>
         </div>
       </div>
     </section>

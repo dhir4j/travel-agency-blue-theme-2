@@ -1,9 +1,28 @@
 'use client'
 
+'use client'
+
 export default function TourSearch() {
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission
+    const formData = new FormData(e.target)
+    const destination = formData.get('destination')
+    const people = formData.get('people')
+    const checkin = formData.get('checkin')
+    const checkout = formData.get('checkout')
+    
+    // Create inquiry message
+    const message = `Tour Inquiry:
+Destination: ${destination}
+Number of People: ${people}
+Check-in Date: ${checkin}
+Check-out Date: ${checkout}
+    
+Please provide tour packages and pricing for the above requirements.`
+    
+    // Redirect to contact page with inquiry details
+    const encodedMessage = encodeURIComponent(message)
+    window.location.href = `/contact?inquiry=${encodedMessage}`
   }
 
   return (
@@ -17,7 +36,7 @@ export default function TourSearch() {
 
           <div className="input-wrapper">
             <label htmlFor="people" className="input-label">Number of People</label>
-            <input type="number" name="people" id="people" required placeholder="Enter Number of People" className="input-field" />
+            <input type="number" name="people" id="people" required placeholder="Enter Number of People" className="input-field" min="1" />
           </div>
 
           <div className="input-wrapper">

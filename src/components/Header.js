@@ -38,7 +38,7 @@ export default function Header() {
 
               <div className="wrapper">
                 <p className="helpline-title">For Further Inquiries: </p>
-                <p className="helpline-number">+1 (123) 456 7890</p>
+                <p className="helpline-number">+91 7347347362</p>
               </div>
             </a>
 
@@ -101,7 +101,7 @@ export default function Header() {
               </ul>
             </nav>
 
-            <button className="btn btn-primary">Book Now</button>
+            <Link href="/tours" className="btn btn-primary">Book Now</Link>
           </div>
         </div>
       </header>
