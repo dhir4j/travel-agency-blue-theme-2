@@ -1,0 +1,2501 @@
+## Search hotel destination
+# request
+curl --request GET \
+	--url 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination?query=man' \
+	--header 'x-rapidapi-host: booking-com15.p.rapidapi.com' \
+	--header 'x-rapidapi-key: 953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
+# example response
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1698310086738,
+  "data": [
+    {
+      "dest_type": "district",
+      "cc1": "us",
+      "city_name": "New York",
+      "label": "Manhattan, New York, New York State, United States",
+      "longitude": -73.970894,
+      "latitude": 40.776115,
+      "type": "di",
+      "region": "New York State",
+      "city_ufi": 20088325,
+      "name": "Manhattan",
+      "roundtrip": "GgEwIAAoATICZW46A21hbkAASgBQAA==",
+      "country": "United States",
+      "image_url": "https://cf.bstatic.com/xdata/images/district/150x150/37931.jpg?k=aaab7e2d310b7db8e7ea0752b451880c93d664bb538331f843810ce6f1a37a82&o=",
+      "dest_id": "929",
+      "nr_hotels": 568,
+      "lc": "en",
+      "hotels": 568
+    },
+    {
+      "dest_id": "-2437894",
+      "nr_hotels": 4798,
+      "country": "Philippines",
+      "image_url": "https://cf.bstatic.com/xdata/images/city/150x150/685726.jpg?k=25b602b90c38b13fe9e858b62a9bbd3c773bf459b16e84b26642a8a056c9f524&o=",
+      "hotels": 4798,
+      "lc": "en",
+      "city_ufi": null,
+      "type": "ci",
+      "region": "Luzon",
+      "roundtrip": "GgEwIAEoATICZW46A21hbkAASgBQAA==",
+      "name": "Manila",
+      "longitude": 120.98368,
+      "latitude": 14.5967655,
+      "cc1": "ph",
+      "dest_type": "city",
+      "label": "Manila, Luzon, Philippines",
+      "city_name": "Manila"
+    },
+    {
+      "label": "Manchester, New Hampshire, United States",
+      "city_name": "Manchester",
+      "cc1": "us",
+      "dest_type": "city",
+      "latitude": 42.9956,
+      "longitude": -71.4553,
+      "roundtrip": "GgEwIAIoATICZW46A21hbkAASgBQAA==",
+      "name": "Manchester",
+      "city_ufi": null,
+      "type": "ci",
+      "region": "New Hampshire",
+      "hotels": 21,
+      "lc": "en",
+      "nr_hotels": 21,
+      "dest_id": "20079942",
+      "country": "United States",
+      "image_url": "https://cf.bstatic.com/xdata/images/city/150x150/957300.jpg?k=6c15d9e11351e7f2206489fdfa50308dc8f248aec7c3f378e73ea5cab182a5f6&o="
+    },
+    {
+      "cc1": "gb",
+      "dest_type": "city",
+      "label": "Manchester, Greater Manchester, United Kingdom",
+      "city_name": "Manchester",
+      "longitude": -2.23615,
+      "latitude": 53.4812,
+      "city_ufi": null,
+      "region": "Greater Manchester",
+      "type": "ci",
+      "roundtrip": "GgEwIAMoATICZW46A21hbkAASgBQAA==",
+      "name": "Manchester",
+      "dest_id": "-2602512",
+      "nr_hotels": 1087,
+      "image_url": "https://cf.bstatic.com/xdata/images/city/150x150/976977.jpg?k=8d13c94917fa00569d115c9123c7b5789ad41f7383b6fad32a1bda8e215e8936&o=",
+      "country": "United Kingdom",
+      "hotels": 1087,
+      "lc": "en"
+    },
+    {
+      "hotels": 208,
+      "lc": "en",
+      "nr_hotels": 208,
+      "dest_id": "1077",
+      "image_url": "https://cf.bstatic.com/xdata/images/district/150x150/56351.jpg?k=81acc465a1c7b3a58b068901ae18dd157da72b472a9753515b9801dfa1c1f832&o=",
+      "country": "United Kingdom",
+      "roundtrip": "GgEwIAQoATICZW46A21hbkAASgBQAA==",
+      "name": "Manchester City Centre",
+      "city_ufi": -2602512,
+      "region": "Greater Manchester",
+      "type": "di",
+      "latitude": 53.47925,
+      "longitude": -2.241755,
+      "label": "Manchester City Centre, Manchester, Greater Manchester, United Kingdom",
+      "city_name": "Manchester",
+      "cc1": "gb",
+      "dest_type": "district"
+    }
+  ]
+}
+
+
+
+
+## Search Hotels
+#exmaple request
+curl --request GET \
+	--url 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=CITY&adults=1&children_age=0%2C17&room_qty=1&page_number=1&units=metric&temperature_unit=c&languagecode=en-us&currency_code=AED&location=US' \
+	--header 'x-rapidapi-host: booking-com15.p.rapidapi.com' \
+	--header 'x-rapidapi-key: 953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
+
+#example response
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1698331801126,
+  "data": {
+    "hotels": [
+      {
+        "accessibilityLabel": "The Taj Mahal Tower, Mumbai.\n5 out of 5 stars.\n9.0 Superb 4887 reviews.\n‎Colaba‬ • ‎11 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n1 bed.\n24190 INR.\nIncludes taxes and charges.\nFree cancellation.",
+        "property": {
+          "reviewScoreWord": "Superb",
+          "accuratePropertyClass": 5,
+          "reviewCount": 4887,
+          "ufi": -2092174,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "qualityClass": 0,
+          "rankingPosition": 0,
+          "reviewScore": 9,
+          "countryCode": "in",
+          "propertyClass": 5,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/31204963.jpg?k=90c11832231c37a814e9631123bd28820e8ad8cd983b78ad529ea139791653d1&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "position": 0,
+          "latitude": 18.9215006738599,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 24190.0001466274
+            },
+            "taxExceptions": []
+          },
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "7471708_158036154_2_42_0"
+          ],
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 74717,
+          "mainPhotoId": 31204963,
+          "name": "The Taj Mahal Tower, Mumbai",
+          "longitude": 72.8332896530628
+        }
+      },
+      {
+        "accessibilityLabel": "Sunset Heaven.\n‎Powai‬ • ‎4 miles from centre‬.\n 495.1 ft² : 2 beds • 1 bedroom • 1 living room • 2 bathrooms.\nOriginal price 9086 INR. Current price 7330 INR..\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "ufi": -2092174,
+          "reviewCount": 0,
+          "reviewScoreWord": "",
+          "accuratePropertyClass": 0,
+          "rankingPosition": 1,
+          "propertyClass": 0,
+          "countryCode": "in",
+          "reviewScore": 0,
+          "checkin": {
+            "fromTime": "14:00",
+            "untilTime": "00:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "latitude": 19.1200589,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "11:00"
+          },
+          "position": 1,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/492673163.jpg?k=630d18165ec29ed9b94030c94d8c505a99027c1abdeaf1589ee857c59ef060df&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "1077565801_380345253_4_0_0"
+          ],
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "strikethroughPrice": {
+              "value": 9086.00005507469,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 7330.39998244494,
+              "currency": "INR"
+            }
+          },
+          "mainPhotoId": 492673163,
+          "name": "Sunset Heaven",
+          "longitude": 72.9171316,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "id": 10775658
+        }
+      },
+      {
+        "accessibilityLabel": "La Terra Cosy Studio Service Apartment.\n4 out of 5 for property rating.\n‎Western Suburbs‬ • ‎9 miles from centre‬.\n 2,691 ft² : 1 bed • 1 bedroom • 1 bathroom.\n3326 INR.\nIncludes taxes and charges.",
+        "property": {
+          "reviewScoreWord": "",
+          "accuratePropertyClass": 0,
+          "ufi": -2092174,
+          "reviewCount": 0,
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "23:30"
+          },
+          "isFirstPage": true,
+          "qualityClass": 4,
+          "rankingPosition": 2,
+          "propertyClass": 0,
+          "countryCode": "in",
+          "reviewScore": 0,
+          "position": 2,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/495003037.jpg?k=937caa5f5495a97fe8fc464131d6d7dafb0b8d8897a5ff5511fa99dcd136fdfa&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "checkout": {
+            "fromTime": "07:00",
+            "untilTime": "11:00"
+          },
+          "latitude": 19.198281317507,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "id": 9972500,
+          "mainPhotoId": 495003037,
+          "name": "La Terra Cosy Studio Service Apartment",
+          "longitude": 72.85712434938,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 3326.39999203384
+            },
+            "taxExceptions": []
+          },
+          "blockIds": [
+            "997250001_372587785_3_1_0"
+          ],
+          "wishlistName": "Mumbai",
+          "optOutFromGalleryChanges": 0
+        }
+      },
+      {
+        "accessibilityLabel": "Novotel Mumbai Juhu Beach.\n5 out of 5 stars.\n6.8 Pleasant 2341 reviews.\n‎Juhu‬ • ‎4.1 miles from centre‬\n‎Beachfront‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 2 beds.\n15340 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Pleasant",
+          "ufi": -2092174,
+          "reviewCount": 2341,
+          "qualityClass": 0,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "15:00"
+          },
+          "isFirstPage": true,
+          "reviewScore": 6.8,
+          "propertyClass": 5,
+          "countryCode": "in",
+          "rankingPosition": 3,
+          "position": 3,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/252005217.jpg?k=9d4ae263d055f30dd78158dbf2f6c34900e5c9078b1a545caa28a3c8466b6a69&o="
+          ],
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "latitude": 19.1085017376187,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 15340.0000929832,
+              "currency": "INR"
+            }
+          },
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "19160501_95454962_2_34_0"
+          ],
+          "optOutFromGalleryChanges": 0,
+          "id": 191605,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "name": "Novotel Mumbai Juhu Beach",
+          "longitude": 72.8243981301785,
+          "mainPhotoId": 252005217
+        }
+      },
+      {
+        "accessibilityLabel": "Taj Santacruz.\n5 out of 5 stars.\n8.8 Fabulous 3479 reviews.\n‎1.9 miles from centre‬\n‎1.7 miles from beach‬\n‎Travel Sustainable‬.\n1 bed.\n23600 INR.\nIncludes taxes and charges.\nFree cancellation.",
+        "property": {
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/125011716.jpg?k=a11b2cf7938b3214652ec26dbe0a51850850e41270bf9a43e986e3d3de848748&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "position": 4,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "latitude": 19.0921868701275,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 23600.0001430511
+            },
+            "benefitBadges": [],
+            "taxExceptions": []
+          },
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "154823717_373397689_2_34_0"
+          ],
+          "id": 1548237,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "name": "Taj Santacruz",
+          "longitude": 72.853407561779,
+          "mainPhotoId": 125011716,
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Fabulous",
+          "isPreferred": true,
+          "reviewCount": 3479,
+          "ufi": -2092174,
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "fromTime": "14:00",
+            "untilTime": "00:00"
+          },
+          "reviewScore": 8.8,
+          "propertyClass": 5,
+          "countryCode": "in",
+          "rankingPosition": 4
+        }
+      },
+      {
+        "accessibilityLabel": "Trident Nariman Point.\n5 out of 5 stars.\n8.8 Fabulous 4000 reviews.\n‎In city centre‬\n‎1.8 miles from beach‬\n‎Travel Sustainable‬.\n Hotel room : 1 bed.\n14603 INR.\nIncludes taxes and charges.",
+        "property": {
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/32810813.jpg?k=7b5f861c6aad4e51ef13e55c8b68ac945cebdf77aeca84d9c2798bb9af46d24d&o="
+          ],
+          "position": 5,
+          "latitude": 18.9276509091609,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "id": 78794,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "name": "Trident Nariman Point",
+          "mainPhotoId": 32810813,
+          "longitude": 72.8205800056458,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 14602.5000885129,
+              "currency": "INR"
+            }
+          },
+          "optOutFromGalleryChanges": 0,
+          "blockIds": [
+            "7879403_88871784_2_2_0"
+          ],
+          "wishlistName": "Mumbai",
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Fabulous",
+          "isPreferred": true,
+          "reviewCount": 4000,
+          "ufi": -2092174,
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "fromTime": "14:00",
+            "untilTime": "00:00"
+          },
+          "propertyClass": 5,
+          "reviewScore": 8.8,
+          "countryCode": "in",
+          "rankingPosition": 5
+        }
+      },
+      {
+        "accessibilityLabel": "Taj Lands End.\n5 out of 5 stars.\n8.6 Fabulous 3957 reviews.\n‎Bandra‬ • ‎4.4 miles from centre‬\n‎1.2 miles from beach‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n1 bed.\n25960 INR.\nIncludes taxes and charges.\nFree cancellation.",
+        "property": {
+          "ufi": -2092174,
+          "reviewCount": 3957,
+          "isPreferred": true,
+          "reviewScoreWord": "Fabulous",
+          "accuratePropertyClass": 5,
+          "rankingPosition": 6,
+          "reviewScore": 8.6,
+          "propertyClass": 5,
+          "countryCode": "in",
+          "checkin": {
+            "fromTime": "14:00",
+            "untilTime": "00:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "latitude": 19.0437067461031,
+          "position": 6,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/13800549.jpg?k=2239f273986987fa71ef3c94ab6f127feb2b859ab63f057980c074689c62c04c&o="
+          ],
+          "blockIds": [
+            "7472201_364461997_2_42_0"
+          ],
+          "wishlistName": "Mumbai",
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 25960.0001573563,
+              "currency": "INR"
+            },
+            "taxExceptions": []
+          },
+          "name": "Taj Lands End",
+          "mainPhotoId": 13800549,
+          "longitude": 72.8190377354622,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "id": 74722
+        }
+      },
+      {
+        "accessibilityLabel": "JW Marriott Mumbai Sahar Airport.\n5 out of 5 stars.\n8.6 Fabulous 2528 reviews.\n‎Western Suburbs‬ • ‎1.9 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 1 bed.\n21830 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "latitude": 19.1031481596599,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "position": 7,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/465549681.jpg?k=8c903ab7bf0fd906a3fe7b456463805c4026db2dab6706341a83d385160f0f9b&o="
+          ],
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "130073602_369175358_2_42_0"
+          ],
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 21830
+            },
+            "taxExceptions": []
+          },
+          "longitude": 72.8775622833977,
+          "name": "JW Marriott Mumbai Sahar Airport",
+          "mainPhotoId": 465549681,
+          "id": 1300736,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "isPreferred": true,
+          "ufi": -2092174,
+          "reviewCount": 2528,
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Fabulous",
+          "propertyClass": 5,
+          "reviewScore": 8.6,
+          "countryCode": "in",
+          "rankingPosition": 7,
+          "qualityClass": 0,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "15:00"
+          },
+          "isFirstPage": true
+        }
+      },
+      {
+        "accessibilityLabel": "Radisson Blu Mumbai International Airport.\n5 out of 5 stars.\n8.3 Very good 2345 reviews.\n‎Western Suburbs‬ • ‎2.2 miles from centre‬\n‎Travel Sustainable‬.\n Hotel room : 1 bed.\n18880 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "checkin": {
+            "fromTime": "15:00",
+            "untilTime": "00:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "rankingPosition": 8,
+          "reviewScore": 8.3,
+          "countryCode": "in",
+          "propertyClass": 5,
+          "reviewScoreWord": "Very good",
+          "accuratePropertyClass": 5,
+          "ufi": -2092174,
+          "reviewCount": 2345,
+          "isPreferred": true,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 18880.0001144409
+            },
+            "benefitBadges": [],
+            "taxExceptions": []
+          },
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "683218601_279330376_2_42_0"
+          ],
+          "optOutFromGalleryChanges": 0,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "id": 6832186,
+          "longitude": 72.8794292490883,
+          "name": "Radisson Blu Mumbai International Airport",
+          "mainPhotoId": 331987485,
+          "position": 8,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/331987485.jpg?k=b48275c360a3d5ccc3d043c7812f2a9314476ace203067eba112bc27421efd6c&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "latitude": 19.108043031195,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          }
+        }
+      },
+      {
+        "accessibilityLabel": "The Oberoi Mumbai.\n5 out of 5 stars.\n9.3 Superb 1615 reviews.\n‎In city centre‬\n‎1.8 miles from beach‬\n‎Travel Sustainable‬.\n Hotel room : 1 bed.\n26963 INR.\nIncludes taxes and charges.",
+        "property": {
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "latitude": 18.9271028775779,
+          "position": 9,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/25339753.jpg?k=42a6601d184ad9e3fe25ec0d15a8605b7e135142479ae42a6265231dca33191f&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "longitude": 72.8202795982361,
+          "name": "The Oberoi Mumbai",
+          "mainPhotoId": 25339753,
+          "id": 78790,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "blockIds": [
+            "7879006_88871785_2_1_0"
+          ],
+          "wishlistName": "Mumbai",
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 26963.0001634359,
+              "currency": "INR"
+            }
+          },
+          "isPreferred": true,
+          "ufi": -2092174,
+          "reviewCount": 1615,
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Superb",
+          "reviewScore": 9.3,
+          "propertyClass": 5,
+          "countryCode": "in",
+          "rankingPosition": 9,
+          "qualityClass": 0,
+          "checkin": {
+            "fromTime": "14:00",
+            "untilTime": "00:00"
+          },
+          "isFirstPage": true
+        }
+      },
+      {
+        "accessibilityLabel": "The Resort.\n4 out of 5 stars.\n7.8 Good 853 reviews.\n‎Western Suburbs‬ • ‎9 miles from centre‬\n‎Beachfront‬\n‎Travel Sustainable‬.\n Private suite : 1 bed.\nOriginal price 17581 INR. Current price 15823 INR..\nIncludes taxes and charges.",
+        "property": {
+          "reviewScoreWord": "Good",
+          "accuratePropertyClass": 4,
+          "ufi": -2092174,
+          "reviewCount": 853,
+          "isPreferred": true,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "rankingPosition": 10,
+          "propertyClass": 4,
+          "reviewScore": 7.8,
+          "countryCode": "in",
+          "position": 10,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/380569812.jpg?k=0755f95e7361587eb7b9c9b79ea62d51b8dcef7cba1e3987daecd59e26daa42b&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "latitude": 19.1733980241533,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 420487,
+          "mainPhotoId": 380569812,
+          "name": "The Resort",
+          "longitude": 72.7960512042046,
+          "priceBreakdown": {
+            "strikethroughPrice": {
+              "currency": "INR",
+              "value": 17580.820106566
+            },
+            "taxExceptions": [],
+            "grossPrice": {
+              "value": 15822.7380959094,
+              "currency": "INR"
+            },
+            "benefitBadges": []
+          },
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "42048706_379250323_3_41_0"
+          ],
+          "optOutFromGalleryChanges": 0
+        }
+      },
+      {
+        "accessibilityLabel": "The Westin Mumbai Garden City.\n5 out of 5 stars.\n8.6 Fabulous 1062 reviews.\n‎Western Suburbs‬ • ‎7 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 2 beds.\n21240 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Fabulous",
+          "isPreferred": true,
+          "reviewCount": 1062,
+          "ufi": -2092174,
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "15:00"
+          },
+          "propertyClass": 5,
+          "reviewScore": 8.6,
+          "countryCode": "in",
+          "rankingPosition": 11,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/345115834.jpg?k=62ef7874f26aa66a18c5e16b928a7302335a286d8e94fac529ddabce25aa8cc5&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "position": 11,
+          "latitude": 19.171513145852,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 21240,
+              "currency": "INR"
+            },
+            "benefitBadges": [],
+            "taxExceptions": []
+          },
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "47348616_246431513_2_42_0"
+          ],
+          "id": 473486,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "name": "The Westin Mumbai Garden City",
+          "mainPhotoId": 345115834,
+          "longitude": 72.8595444560051
+        }
+      },
+      {
+        "accessibilityLabel": "The Taj Mahal Palace, Mumbai.\n5 out of 5 stars.\n9.1 Superb 1505 reviews.\n‎Colaba‬ • ‎11 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n1 bed.\n33040 INR.\nIncludes taxes and charges.\nFree cancellation.",
+        "property": {
+          "blockIds": [
+            "245159510_137748730_2_42_0"
+          ],
+          "wishlistName": "Mumbai",
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 33040.0002002716,
+              "currency": "INR"
+            },
+            "taxExceptions": []
+          },
+          "longitude": 72.8331752172471,
+          "name": "The Taj Mahal Palace, Mumbai",
+          "mainPhotoId": 103705059,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 2451595,
+          "latitude": 18.9216373548013,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "position": 12,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/103705059.jpg?k=9e078265b31ad1815a573da8ed2a665f863e3925e1efd730df703421868a2ada&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "rankingPosition": 12,
+          "propertyClass": 5,
+          "reviewScore": 9.1,
+          "countryCode": "in",
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "ufi": -2092174,
+          "reviewCount": 1505,
+          "isPreferred": true,
+          "reviewScoreWord": "Superb",
+          "accuratePropertyClass": 5
+        }
+      },
+      {
+        "accessibilityLabel": "ITC Maratha, a Luxury Collection Hotel, Mumbai.\n5 out of 5 stars.\n8.2 Very good 3170 reviews.\n‎Western Suburbs‬ • ‎2 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 1 bed.\n25134 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "47077311_244938433_2_41_0"
+          ],
+          "optOutFromGalleryChanges": 0,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 25134.0001523495,
+              "currency": "INR"
+            }
+          },
+          "name": "ITC Maratha, a Luxury Collection Hotel, Mumbai",
+          "longitude": 72.8700031488916,
+          "mainPhotoId": 461630790,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 470773,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "latitude": 19.1039728778104,
+          "position": 13,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/461630790.jpg?k=2beb268dfb8f3a11672b58aba9aab03f16a86f374d97de2315aaf993218204b4&o="
+          ],
+          "rankingPosition": 13,
+          "countryCode": "in",
+          "reviewScore": 8.2,
+          "propertyClass": 5,
+          "checkin": {
+            "fromTime": "15:00",
+            "untilTime": "00:00"
+          },
+          "isFirstPage": true,
+          "qualityClass": 0,
+          "ufi": -2092174,
+          "reviewCount": 3170,
+          "isPreferred": true,
+          "reviewScoreWord": "Very good",
+          "accuratePropertyClass": 5
+        }
+      },
+      {
+        "accessibilityLabel": "Sun-n-Sand Mumbai Juhu Beach.\n5 out of 5 stars.\n7.1 Good 484 reviews.\n‎Juhu‬ • ‎4.2 miles from centre‬\n‎Beachfront‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 1 bed.\n18572 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "isFirstPage": true,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "qualityClass": 0,
+          "rankingPosition": 14,
+          "reviewScore": 7.1,
+          "countryCode": "in",
+          "propertyClass": 5,
+          "reviewScoreWord": "Good",
+          "accuratePropertyClass": 5,
+          "reviewCount": 484,
+          "ufi": -2092174,
+          "isPreferred": true,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 18572.0201125741
+            },
+            "benefitBadges": []
+          },
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "25210401_212577763_2_2_0"
+          ],
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 252104,
+          "name": "Sun-n-Sand Mumbai Juhu Beach",
+          "longitude": 72.8243431448936,
+          "mainPhotoId": 11467865,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/11467865.jpg?k=d04b316383601e27b9f7d08a6f70c46ebd63be5b0c7a884d55c85c32b533e959&o="
+          ],
+          "position": 14,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "latitude": 19.1094876241502
+        }
+      },
+      {
+        "accessibilityLabel": "Hotel Ariana Residency.\n4 out of 5 stars.\n6.9 Pleasant 369 reviews.\n‎Western Suburbs‬ • ‎4.6 miles from centre‬\n‎5,000 feet from beach‬\n‎Travel Sustainable‬\n‎This property has cots available‬.\n Hotel room : 1 bed.\nOriginal price 14702 INR. Current price 11026 INR..\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "isPreferred": true,
+          "reviewCount": 369,
+          "ufi": -2092174,
+          "accuratePropertyClass": 4,
+          "reviewScoreWord": "Pleasant",
+          "propertyClass": 4,
+          "reviewScore": 6.9,
+          "countryCode": "in",
+          "rankingPosition": 15,
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "untilTime": "23:00",
+            "fromTime": "12:00"
+          },
+          "latitude": 19.1275934612682,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "11:00"
+          },
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/392019082.jpg?k=d825a25be93ddb1a2bc16e0fdb573ec8bcb9ed69e286890b207ca558748dca32&o="
+          ],
+          "isPreferredPlus": true,
+          "position": 15,
+          "longitude": 72.8326159372177,
+          "name": "Hotel Ariana Residency",
+          "mainPhotoId": 392019082,
+          "id": 8778629,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "optOutFromGalleryChanges": 0,
+          "blockIds": [
+            "877862902_375547299_2_2_0"
+          ],
+          "wishlistName": "Mumbai",
+          "priceBreakdown": {
+            "strikethroughPrice": {
+              "value": 14701.7498891145,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 11026.3094668359,
+              "currency": "INR"
+            }
+          }
+        }
+      },
+      {
+        "accessibilityLabel": "Niranta Transit Hotel Mumbai Airport - At Arrivals.\n4 out of 5 stars.\n7.2 Good 1032 reviews.\n‎Andheri‬ • ‎1.6 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 1 bed.\nOriginal price 32081 INR. Current price 19249 INR..\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "position": 16,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/336693532.jpg?k=86ff2c5bb735ba1061a35f977c362a4b9c6dd65ec067c4398de0c0377e0c3ebd&o="
+          ],
+          "checkoutDate": "2023-11-22",
+          "latitude": 19.0992184723321,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "id": 1781955,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "mainPhotoId": 336693532,
+          "name": "Niranta Transit Hotel Mumbai Airport - At Arrivals",
+          "longitude": 72.8753851192016,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 19248.7501166761,
+              "currency": "INR"
+            },
+            "strikethroughPrice": {
+              "value": 32081.2501944602,
+              "currency": "INR"
+            },
+            "taxExceptions": []
+          },
+          "blockIds": [
+            "178195501_333098515_2_2_0"
+          ],
+          "wishlistName": "Mumbai",
+          "optOutFromGalleryChanges": 0,
+          "accuratePropertyClass": 4,
+          "reviewScoreWord": "Good",
+          "isPreferred": true,
+          "ufi": -2092174,
+          "reviewCount": 1032,
+          "qualityClass": 0,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "12:00"
+          },
+          "isFirstPage": true,
+          "countryCode": "in",
+          "reviewScore": 7.2,
+          "propertyClass": 4,
+          "rankingPosition": 16
+        }
+      },
+      {
+        "accessibilityLabel": "Hilton Mumbai International Airport Hotel.\n5 out of 5 stars.\n7.8 Good 1869 reviews.\n‎Western Suburbs‬ • ‎2 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 2 beds.\n21830 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "15:00"
+          },
+          "reviewScore": 7.8,
+          "countryCode": "in",
+          "propertyClass": 5,
+          "rankingPosition": 17,
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Good",
+          "isPreferred": true,
+          "reviewCount": 1869,
+          "ufi": -2092174,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 21830.0001323223
+            },
+            "benefitBadges": [],
+            "taxExceptions": []
+          },
+          "optOutFromGalleryChanges": 1,
+          "blockIds": [
+            "28362412_379643280_2_42_0"
+          ],
+          "wishlistName": "Mumbai",
+          "id": 283624,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "mainPhotoId": 483825117,
+          "name": "Hilton Mumbai International Airport Hotel",
+          "longitude": 72.8709116578102,
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/483825117.jpg?k=3e9ad1b06f2d88d6794eb7662223650800963fe496eafdcb0f84ee8f6b516182&o="
+          ],
+          "position": 17,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "latitude": 19.1041906326191
+        }
+      },
+      {
+        "accessibilityLabel": "Courtyard by Marriott Mumbai International Airport.\n5 out of 5 stars.\n8.1 Very good 1371 reviews.\n‎Western Suburbs‬ • ‎2.8 miles from centre‬\n‎Travel Sustainable‬\n‎This property has free cots available‬.\n Hotel room : 1 bed.\n24780 INR.\nIncludes taxes and charges.\nFree cancellation.",
+        "property": {
+          "reviewScore": 8.1,
+          "countryCode": "in",
+          "propertyClass": 5,
+          "rankingPosition": 18,
+          "qualityClass": 0,
+          "isFirstPage": true,
+          "checkin": {
+            "fromTime": "15:00",
+            "untilTime": "00:00"
+          },
+          "isPreferred": true,
+          "reviewCount": 1371,
+          "ufi": -2092174,
+          "accuratePropertyClass": 5,
+          "reviewScoreWord": "Very good",
+          "name": "Courtyard by Marriott Mumbai International Airport",
+          "mainPhotoId": 461660051,
+          "longitude": 72.8643321990967,
+          "id": 238999,
+          "checkinDate": "2023-11-21",
+          "currency": "INR",
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "23899910_270181244_2_42_0"
+          ],
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 24780
+            },
+            "benefitBadges": []
+          },
+          "latitude": 19.1137681789981,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/461660051.jpg?k=b8149f7ac7756b80accb066e0feb56c0dd13e0534048da3cfd782d5e366cdabb&o="
+          ],
+          "position": 18
+        }
+      },
+      {
+        "accessibilityLabel": "Novotel Mumbai International Airport.\n5 out of 5 stars.\n8.4 Very good 488 reviews.\n‎Western Suburbs‬ • ‎2.4 miles from centre‬\n‎Travel Sustainable‬.\n Hotel room : 1 bed.\n16519 INR.\nIncludes taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "latitude": 19.110109,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "checkoutDate": "2023-11-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square60/464507617.jpg?k=bd777877f671cb063e5aa6b1739caaeea63d45b099e3bb839a7bfe6fbb2e4218&o="
+          ],
+          "position": 19,
+          "optOutFromGalleryChanges": 0,
+          "wishlistName": "Mumbai",
+          "blockIds": [
+            "936061202_365769414_2_42_0"
+          ],
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 16518.8201001287
+            },
+            "benefitBadges": []
+          },
+          "longitude": 72.875298,
+          "name": "Novotel Mumbai International Airport",
+          "mainPhotoId": 464507617,
+          "currency": "INR",
+          "checkinDate": "2023-11-21",
+          "id": 9360612,
+          "reviewCount": 488,
+          "ufi": -2092174,
+          "isPreferred": true,
+          "reviewScoreWord": "Very good",
+          "accuratePropertyClass": 5,
+          "rankingPosition": 19,
+          "reviewScore": 8.4,
+          "propertyClass": 5,
+          "countryCode": "in",
+          "isFirstPage": true,
+          "checkin": {
+            "fromTime": "15:00",
+            "untilTime": "00:00"
+          },
+          "qualityClass": 0
+        }
+      }
+    ],
+    "meta": [
+      {
+        "title": "393 properties"
+      }
+    ],
+    "appear": [
+      {
+        "component": {
+          "props": {
+            "fill": true,
+            "content": {
+              "props": {
+                "fitContentWidth": true,
+                "items": [
+                  {
+                    "props": {
+                      "component": {
+                        "props": {
+                          "spacing": "spacing_half",
+                          "items": [
+                            {
+                              "props": {
+                                "text": [
+                                  {
+                                    "text": "Commission paid and other benefits may affect an accommodation's ranking.",
+                                    "font": "body_2"
+                                  },
+                                  {
+                                    "text": "  ",
+                                    "color": "foreground",
+                                    "font": "strong_2"
+                                  },
+                                  {
+                                    "font": "body_2",
+                                    "color": "action_foreground",
+                                    "text": "Find out more",
+                                    "linkActions": [
+                                      {
+                                        "props": {
+                                          "url": "booking://webview?url=https%3A%2F%2Fm.booking.com%2Fgeneral.en.html%3Faid%3D332731%3Btmpl%3Ddocs%2Fterms-and-conditions"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "props": {}
+                  },
+                  {
+                    "props": {
+                      "component": {
+                        "props": {
+                          "accessibilityLabel": "Close",
+                          "icon": "close",
+                          "tertiaryTintedColor": "foreground",
+                          "variant": "tertiary_tinted"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "id": "cma"
+      },
+      {
+        "contentUrl": "https://mobile-apps.booking.com/json/mobile.saba?route_path=saba-chat-entrypoint&add_bh_info=1&add_genius_percentage_value=1&add_ribbon_text=1&affiliate_id=332731&arrival_date=2023-11-21&autoextend=1&booked_x_times_for_dates=1&booked_x_times_threshold=1&categories_filter_additional_data=&change_popularity_sort_option_copy_tag=1&change_sort_options_copy_tags=1&check_excluded_charge_or_tax=1&check_flexible_dates=1&check_is_candidate_wholesaler=1&currency_code=INR&dark_mode=1&deeplink_sec_since_click=168567.9046729803&departure_date=2023-11-22&dest_ids=-2092174&device_id=57d11ec8bad14e119e4c15a86202c23f&distance_unit=metric&dl_sr_adoption=1&dotd=2&exposure_api_version=2.17&fix_dotd=1&flex_window=0&generate_map_bounding_box=1&get_cny_campaign_banner=1&get_skiing_info=1&guest_qty=1&include_amazon_banner=1&include_apartment_config=1&include_badges_in_price_breakdown=1&include_beach_information=1&include_bh_quality_classification=1&include_block_ids=1&include_bsb_info=1&include_bwallet_hotel_eligibility=1&include_composite_breakdown=1&include_cpc_non_trader_copy=1&include_excluded_charges_detail=1&include_free_cancellation=1&include_genius_badge=1&include_last_reservation=1&include_nr_bookings_best_range_message=1&include_nr_bookings_today=1&include_offered_bed_types=1&include_preview_cards=1&include_rack_rate_savings=1&include_rtb=1&include_ski_information=1&languagecode=en&location_source=recents&mark_first_highlighted_hotel=1&min_saba_version=31&network_type=wifi&new_segments_carousel=1&offset=0&optimized_call=1&outcome=search_results&page_define_enabled=1&pref_match=0&reason=change_sort_options&remove_wishlist_padding=1&room_qty=1&rows=auto&saba=1&saba_payload_root=1&saba_version=50&sb_calendar_open=1&search_type=city&send_ranking_version=1&send_search_id=1&show_beach_filter_badge=1&show_city_distance=1&show_distance_to_beach=1&show_distance_to_nearest_public_transport=1&show_genius_free_breakfast=0&show_if_mobile_deal=1&show_negotiated_rates=1&show_no_prepayment=1&show_policy=1&show_review_score_breakdowns=1&show_selected_filter_values=1&show_soldout=1&sort_by=auto&sort_by_source=sort_options&sort_genius_new_copy=1&source=search_results&temperature_unit=c&travel_purpose=&unfiltered_count_enabled=1&units=imperial&use_dest_based_list_creation=1&use_direct_payment=1&user_os=15.5&user_version=36.8-iphone&categories_filter=price%3A%3AINR-min-max&children_qty=2&children_age=0%2C17&page=search-results"
+      },
+      {
+        "id": "banner_qualityrating",
+        "component": {
+          "props": {
+            "title": "",
+            "text": "Properties with these icons have been awarded Booking.com's quality rating for homes"
+          }
+        }
+      },
+      {
+        "id": "signin_now",
+        "component": {
+          "props": {
+            "text": "Get instant access to our Genius loyalty programme and enjoy discounts at properties worldwide.",
+            "title": "Sign in and save money"
+          }
+        }
+      }
+    ]
+  }
+}
+
+## Get Hotel photos
+
+#example request
+curl --request GET \
+	--url 'https://booking-com15.p.rapidapi.com/api/v1/hotels/getHotelPhotos?hotel_id=5955189' \
+	--header 'x-rapidapi-host: booking-com15.p.rapidapi.com' \
+	--header 'x-rapidapi-key: 953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
+
+#example response
+{"status":true,"message":"Success","timestamp":1769137274102,"data":[{"id":762637427,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/762637427.jpg?k=213980e8276fc2cc12454d070fbc4c45866b99579fbf3e760059a92ea9482f3f&o="},{"id":613758060,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758060.jpg?k=f9bc8735de5086e316bc0849872c2d638bce3106d26a97eb55ec01318755e65d&o="},{"id":762637362,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/762637362.jpg?k=5a6b122b83498e7452856364e2c59e3fffe7fbd54f3e272b8fcdab443b98bce0&o="},{"id":762637461,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/762637461.jpg?k=d8c99c38abed296b0954e961e66917ced636b496b00181826fd0011e43a5da4b&o="},{"id":762637349,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/762637349.jpg?k=db802a8c0e63b4c23cac8a19c44f19de98232a896f1fa4b6bdc30c5942ced8df&o="},{"id":613758049,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758049.jpg?k=36fc868217aef275255897fdb740f80052f7632ef4a87f01f0b83bdcd696a202&o="},{"id":613758053,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758053.jpg?k=ebaafb4911a15036e93557391147940565fb8c8f0e40a15bca2e7e4442d55030&o="},{"id":613758035,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758035.jpg?k=aa04a227e42658d2052381a1f97b81cf773f60efa7305b722f75cca54e839be7&o="},{"id":613758046,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758046.jpg?k=86982b6e5742f78e310813898769995ed7c4608c266aedbbfebc8815cb9694ef&o="},{"id":613758043,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758043.jpg?k=8d36dd458838e994b6ea88a12e6a333c6e818003821ca02ccd0b1c4be8b61a04&o="},{"id":613758070,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758070.jpg?k=6bede17c30c390a907c88b23c56e226248affe1293d4df719703d885cdfc8da5&o="},{"id":613758072,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758072.jpg?k=7423aa5528ab83d6254a929b632ab7598dd75c3d8d119feda6723a8bbab4e67a&o="},{"id":613758061,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758061.jpg?k=6bf7cd6e81ecd9d7479e81e1279e2d1681207b720606c3aaf1843ad919ea971e&o="},{"id":613758044,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758044.jpg?k=377914666daa8f7a6e2f2150227531abc4d473ea404bf89216f0103c470418cb&o="},{"id":613758065,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758065.jpg?k=f351bddf8522b4ff256e58921c96bc44d534abfcaeaef7bae29185bb16c0059c&o="},{"id":613758036,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758036.jpg?k=2b6dee081ce6e3c75f977390f92c756179581b8399f6933095fa045e9c13761b&o="},{"id":613758048,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758048.jpg?k=949a4f6b17a808d5bebb469f9d4e0c78d1c9a132c3e23c252877c4c00141ffb9&o="},{"id":613758058,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758058.jpg?k=37dd688a9a429ab990197bb572b19a918d9998c79ec7d5b097c8315415de7aaf&o="},{"id":613758071,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758071.jpg?k=e52ad586bbfe2d77f9f67be29a12160c3975eea8640d1dd620d83f709ab163f2&o="},{"id":613758052,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758052.jpg?k=0b14cfa97194764af3f0663d6e31ca26c16f64ee933fab5629da1fac1d914359&o="},{"id":613758059,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758059.jpg?k=55b3813d910da076c9ebb6c55ac94e7baa883693d58a67583818c5053f15d247&o="},{"id":613758045,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758045.jpg?k=4794ef588e34705fd4a206c405c9e8c9ae3d14f252f14d7ae02b3a100d20ac8a&o="},{"id":613758040,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758040.jpg?k=4bf04844d971c2aeea671bb80233457415d00328409ae88664a1fd159da0b20a&o="},{"id":613758075,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758075.jpg?k=0ad886033e4b250bbb570743434dbcaecc5eb9266618b21f407c4ba5feaf7a6f&o="},{"id":613758029,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758029.jpg?k=ef475c2640643aec235b831f638fec315beda1141167eb67bebc9b400d6912be&o="},{"id":613758076,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758076.jpg?k=ce1083b85e0f171a1c0ad5cfbe26b1982f80b2acc9de90f4a385d474b5d9e1b2&o="},{"id":613758099,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758099.jpg?k=5ae88e0e976f9af2eacd90b55c3b033b4b812a22b08e81a4b9e68ad6d78624e1&o="},{"id":613758042,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758042.jpg?k=d7488655d0bb1e58fe98ca322781105463e2290ae11426f2fd7019899e662dfb&o="},{"id":613758047,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758047.jpg?k=fa94ba7a7a75b94ddaafe1854e84621fc608e0d940d1ad21323a7722350b23ce&o="},{"id":613758057,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758057.jpg?k=6add8d5716b015f7eb152fb8b473c60027900d3ee830472d715928e382a2d8c6&o="},{"id":613758073,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758073.jpg?k=8f8789387309bdd56e40bea4cb2dd64c0e90f1ed50c43eef219f86349e605213&o="},{"id":613758030,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758030.jpg?k=99aaff93538dedcd8b5e318d4d0c6290ffa98918114ece05d4535e6f7c4eec47&o="},{"id":613758050,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758050.jpg?k=a14d10525d75d30d83ec89c07d99f3226d9fd6dffef33410b63594f952c3e8e5&o="},{"id":613758028,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758028.jpg?k=a6e77df2d5cfa8557e1f0e7e36dcccf6c01b41984078ff0e70f5833ef7fe1d99&o="},{"id":613758055,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758055.jpg?k=dcbe10766313ec17c9987c0706ad04b5db11c60fd963ba5006566b5d7cc170fa&o="},{"id":613758077,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758077.jpg?k=b563532bcecbd6fbb04501de0e64dc6fdf95a6d13375f3625c2a5d3adbd64eae&o="},{"id":613758069,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758069.jpg?k=fe95a4535b9782a83444c6eab028499006f980a226430d4565026b42c452cff7&o="},{"id":613758038,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758038.jpg?k=9d05166ac256ac7fd45880ec4a993559e289553e602f0f89db02fe94194e96d5&o="},{"id":613758063,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758063.jpg?k=d43bf2cb2b58e3f4e8bc6ce6a90a90a42b931cedc784f85d4426c1ab3fb14e9b&o="},{"id":762637412,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/762637412.jpg?k=910cf1378232fa7d4b5e871edaed8c3a65e9ff0b255b7fba1d4d4d41d95b7c57&o="},{"id":613758062,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758062.jpg?k=0a09a410f3a84c1e11154d26d423c1322f449e01126df123922310819925d1ad&o="},{"id":613758068,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758068.jpg?k=eb2775dd4808c83162623a23c37eefc7c566a74333f99a830145536378a64253&o="},{"id":613758067,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/613758067.jpg?k=c496f3f59210d5d0b36197817b156d678b691651ee0df13218e2840d525c392f&o="},{"id":664350121,"url":"https://cf.bstatic.com/xdata/images/hotel/square1024/664350121.jpg?k=71051a40cc7cb469b97325a2999187a9fa7001cc17d0923c718fc1e907d391e0&o="}]}
+
+## Get Hotel Details
+# Example request
+curl --request GET \
+	--url 'https://booking-com15.p.rapidapi.com/api/v1/hotels/getHotelDetails?hotel_id=191605&adults=1&children_age=1%2C17&room_qty=1&units=metric&temperature_unit=c&languagecode=en-us&currency_code=EUR' \
+	--header 'x-rapidapi-host: booking-com15.p.rapidapi.com' \
+	--header 'x-rapidapi-key: 953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
+
+#example response
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1698349627097,
+  "data": {
+    "ufi": -2092174,
+    "hotel_id": 191605,
+    "hotel_name": "Novotel Mumbai Juhu Beach",
+    "url": "https://www.booking.com/hotel/in/novotel-mumbai-juhu-beach.html",
+    "hotel_name_trans": "",
+    "review_nr": 2335,
+    "arrival_date": "2023-11-17",
+    "departure_date": "2023-11-18",
+    "price_transparency_mode": "none",
+    "accommodation_type_name": "Hotels",
+    "latitude": 19.1085017376187,
+    "longitude": 72.8243981301785,
+    "address": "Juhu Beach, Maharastra",
+    "address_trans": "",
+    "city": "Mumbai",
+    "city_trans": "Mumbai",
+    "city_in_trans": "in Mumbai",
+    "city_name_en": "Mumbai",
+    "district": "Juhu",
+    "countrycode": "in",
+    "distance_to_cc": 6.66271369989499,
+    "default_language": "en-gb",
+    "country_trans": "India",
+    "currency_code": "INR",
+    "zip": "400049",
+    "timezone": "Asia/Kolkata",
+    "rare_find_state": "NOT_RARE",
+    "soldout": 0,
+    "available_rooms": 7,
+    "max_rooms_in_reservation": 7,
+    "average_room_size_for_ufi_m2": "14.07",
+    "is_family_friendly": 0,
+    "is_closed": 0,
+    "is_crimea": 0,
+    "is_hotel_ctrip": 0,
+    "is_price_transparent": 0,
+    "is_genius_deal": 0,
+    "is_cash_accepted_check_enabled": 1,
+    "qualifies_for_no_cc_reservation": 0,
+    "hotel_include_breakfast": 1,
+    "cc1": "in",
+    "family_facilities": [
+      "Outdoor pool",
+      "Outdoor pool (all year)",
+      "Beachfront",
+      "Kids' club",
+      "Babysitting/child services",
+      "Family rooms"
+    ],
+    "product_price_breakdown": {
+      "charges_details": {
+        "amount": {
+          "value": 25,
+          "currency": "EUR"
+        },
+        "mode": "extra_charges",
+        "translated_copy": "+€ 24.53 taxes and charges"
+      },
+      "nr_stays": 7,
+      "has_long_stays_weekly_rate_price": 0,
+      "has_long_stays_monthly_rate_price": 0,
+      "benefits": [],
+      "excluded_amount": {
+        "currency": "EUR",
+        "value": 24.526563374598
+      },
+      "gross_amount_hotel_currency": {
+        "value": 12000,
+        "currency": "INR"
+      },
+      "included_taxes_and_charges_amount": {
+        "value": 0,
+        "currency": "EUR"
+      },
+      "items": [
+        {
+          "name": "Goods & services tax",
+          "item_amount": {
+            "value": 24.526563374598,
+            "currency": "EUR"
+          },
+          "kind": "charge",
+          "base": {
+            "base_amount": 0,
+            "kind": "variable_amount"
+          },
+          "inclusion_type": "excluded",
+          "details": null
+        }
+      ],
+      "gross_amount_per_night": {
+        "value": 136.25868,
+        "currency": "EUR"
+      },
+      "all_inclusive_amount": {
+        "currency": "EUR",
+        "value": 160.785243374598
+      },
+      "net_amount": {
+        "currency": "EUR",
+        "value": 136.25868
+      },
+      "gross_amount": {
+        "value": 136.25868,
+        "currency": "EUR"
+      }
+    },
+    "composite_price_breakdown": {
+      "included_taxes_and_charges_amount": {
+        "value": 0,
+        "currency": "EUR"
+      },
+      "gross_amount_hotel_currency": {
+        "currency": "INR",
+        "value": 12000
+      },
+      "has_long_stays_weekly_rate_price": 0,
+      "has_long_stays_monthly_rate_price": 0,
+      "benefits": [],
+      "excluded_amount": {
+        "currency": "EUR",
+        "value": 24.526563374598
+      },
+      "charges_details": {
+        "mode": "extra_charges",
+        "amount": {
+          "value": 25,
+          "currency": "EUR"
+        },
+        "translated_copy": "+€ 24.53 taxes and charges"
+      },
+      "all_inclusive_amount": {
+        "currency": "EUR",
+        "value": 160.785243374598
+      },
+      "net_amount": {
+        "value": 136.25868,
+        "currency": "EUR"
+      },
+      "gross_amount": {
+        "value": 136.25868,
+        "currency": "EUR"
+      },
+      "items": [
+        {
+          "name": "Goods & services tax",
+          "item_amount": {
+            "currency": "EUR",
+            "value": 24.526563374598
+          },
+          "kind": "charge",
+          "base": {
+            "kind": "variable_amount",
+            "base_amount": 0
+          },
+          "inclusion_type": "excluded",
+          "details": null
+        }
+      ],
+      "gross_amount_per_night": {
+        "value": 136.25868,
+        "currency": "EUR"
+      }
+    },
+    "property_highlight_strip": [
+      {
+        "name": "Free parking",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/parking_sign"
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/pawprint"
+          }
+        ],
+        "name": "Pets allowed"
+      },
+      {
+        "name": "Swimming pool",
+        "icon_list": [
+          {
+            "icon": "iconset/pool",
+            "size": 1
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "icon": "iconset/food",
+            "size": 1
+          }
+        ],
+        "name": "Restaurant"
+      },
+      {
+        "name": "Spa and wellness centre",
+        "icon_list": [
+          {
+            "icon": "iconset/spa",
+            "size": 1
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/snowflake"
+          }
+        ],
+        "name": "Air conditioning"
+      },
+      {
+        "name": "Private bathroom",
+        "icon_list": [
+          {
+            "icon": "iconset/shower",
+            "size": 1
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/eye"
+          }
+        ],
+        "name": "View"
+      },
+      {
+        "name": "Free WiFi",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/wifi"
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/shower"
+          }
+        ],
+        "name": "Shower"
+      }
+    ],
+    "sustainability": {
+      "sustainability_page": {
+        "tier": "gold",
+        "description": "These are the steps this property has taken to provide more sustainable and environmentally friendly travel:",
+        "sustainable_facility_count": 25,
+        "title": "Sustainability steps",
+        "level_details": "This property has told us they’re making large investments and efforts towards sustainability by taking steps that can have environmental and social impact. We’ve worked with experts including Travalyst and Sustainalize to create the Travel Sustainable programme – making it easier for you to experience the world more sustainably.",
+        "level": "L3",
+        "cta": "Read more about Travel Sustainable",
+        "efforts": [
+          {
+            "icon": "recycling_sign",
+            "title": "Waste",
+            "steps": [
+              "Single-use plastic miniature shampoo, conditioner, and body wash bottles not used",
+              "Single-use plastic straws not used",
+              "Single-use plastic cups not used",
+              "Single-use plastic water bottles not used",
+              "Single-use plastic cutlery/plates not used",
+              "Water cooler/dispenser",
+              "Single-use plastic stirrers not used",
+              "Recycling bins available to guests and waste is recycled"
+            ]
+          },
+          {
+            "icon": "blood_drop",
+            "steps": [
+              "Option to reuse towels",
+              "Option to opt-out of daily room cleaning",
+              "Water-efficient toilets",
+              "Water-efficient showers"
+            ],
+            "title": "Water"
+          },
+          {
+            "icon": "renewable_energy_charging",
+            "steps": [
+              "Key card or motion-controlled electricity",
+              "Most lighting throughout property uses energy-efficient LED bulbs",
+              "All windows are double-glazed",
+              "The property makes efforts to reduce their food wastage",
+              "Vegetarian menu options offered",
+              "Vegan menu options offered "
+            ],
+            "title": "Energy and greenhouse gases"
+          },
+          {
+            "icon": "group",
+            "steps": [
+              "Invests a percentage of revenue back into community projects or sustainability projects",
+              "Tours and activities organised by local guides and businesses offered",
+              "Local artists are offered a platform to display their talents",
+              "Provides guests with information regarding local ecosystems, heritage and culture, as well as visitor etiquette"
+            ],
+            "title": "Destination and community"
+          },
+          {
+            "steps": [
+              "Wild (non-domesticated) animals are not displayed/interacted with while captive on the property or harvested, consumed, or sold.",
+              "Offsets a portion of their carbon footprint",
+              "Green spaces such as gardens/rooftop gardens on the property"
+            ],
+            "title": "Nature",
+            "icon": "tree"
+          }
+        ],
+        "has_programmes": 0
+      },
+      "hotel_page": {
+        "has_badge": 1,
+        "title": "Travel Sustainable Level 3",
+        "cta": "Read more",
+        "description": "This property is part of the Travel Sustainable programme, which means it’s taken significant steps to make your stay more sustainable."
+      },
+      "sustainability_level": {
+        "name": "L3",
+        "id": 3,
+        "title": "Travel Sustainable Level 3"
+      }
+    },
+    "facilities_block": {
+      "facilities": [
+        {
+          "name": "1 swimming pool",
+          "icon": "pool"
+        },
+        {
+          "icon": "shuttle",
+          "name": "Airport shuttle"
+        },
+        {
+          "icon": "nosmoking",
+          "name": "Non-smoking rooms"
+        },
+        {
+          "name": "Fitness centre",
+          "icon": "fitness"
+        },
+        {
+          "name": "Room service",
+          "icon": "clean"
+        },
+        {
+          "name": "Spa and wellness centre",
+          "icon": "spa"
+        },
+        {
+          "name": "Restaurant",
+          "icon": "food_and_drink"
+        },
+        {
+          "icon": "disabled",
+          "name": "Facilities for disabled guests"
+        },
+        {
+          "name": "Beachfront",
+          "icon": "beach"
+        },
+        {
+          "icon": "wifi",
+          "name": "WiFi available in all areas"
+        },
+        {
+          "name": "Free parking",
+          "icon": "parking_sign"
+        },
+        {
+          "name": "Private parking",
+          "icon": "parking_sign"
+        },
+        {
+          "name": "Family rooms",
+          "icon": "family"
+        },
+        {
+          "icon": "pawprint",
+          "name": "Pets allowed"
+        },
+        {
+          "icon": "wifi",
+          "name": "Free WiFi"
+        }
+      ],
+      "name": "Most popular facilities",
+      "type": "popular"
+    },
+    "top_ufi_benefits": [
+      {
+        "translated_name": "WiFi",
+        "icon": "wifi"
+      },
+      {
+        "translated_name": "Airport shuttle",
+        "icon": "shuttle"
+      },
+      {
+        "translated_name": "Swimming pool",
+        "icon": "pool"
+      },
+      {
+        "icon": "family",
+        "translated_name": "Family rooms"
+      },
+      {
+        "translated_name": "Parking",
+        "icon": "parking_sign"
+      },
+      {
+        "icon": "fitness",
+        "translated_name": "Fitness centre"
+      }
+    ],
+    "languages_spoken": {
+      "languagecode": [
+        "mr",
+        "hi",
+        "en-gb"
+      ]
+    },
+    "spoken_languages": [
+      "mr",
+      "hi",
+      "en-gb"
+    ],
+    "breakfast_review_score": {
+      "rating": 6.8,
+      "review_score": 6.8,
+      "review_snippet": "",
+      "review_score_word": "Pleasant",
+      "review_number": 161,
+      "review_count": 161
+    },
+    "wifi_review_score": {
+      "rating": 7.5
+    },
+    "info_banners": [
+      {
+        "primary_action": {
+          "action_context": "covid19-faq",
+          "action": "open-page",
+          "text": "Read more"
+        },
+        "type": "banner",
+        "is_default_collapsed": 1,
+        "priority": 100,
+        "secondary_action": {},
+        "title": "Coronavirus (COVID-19) Support",
+        "position_to_inject": 0,
+        "collapsible": 1,
+        "id": "coronavirus",
+        "show_after_dismissed_time": 24,
+        "messages": [
+          "Get the travel advice you need. Read more about possible travel restrictions before you go."
+        ],
+        "show_after_dismissed": 1,
+        "dismissable": 0
+      }
+    ],
+    "min_room_distribution": {
+      "children": [],
+      "adults": 1
+    },
+    "available_deal_descriptions": [],
+    "tax_exceptions": [],
+    "booking_home": {},
+    "aggregated_data": {
+      "has_refundable": 1,
+      "has_nonrefundable": 0,
+      "has_seating": 1,
+      "has_kitchen": 0,
+      "common_kitchen_fac": [
+        {
+          "name": "Electric kettle",
+          "id": 86
+        }
+      ]
+    },
+    "last_reservation": {
+      "country": null,
+      "countrycode": null,
+      "time": ""
+    },
+    "free_facilities_cancel_breakfast": [
+      {
+        "facility_id": 46
+      },
+      {
+        "facility_id": 105
+      }
+    ],
+    "room_recommendation": [
+      {
+        "children": 0,
+        "babies": 0,
+        "block_id": "19160501_95454962_2_34_0",
+        "extra_babycots_price": 0,
+        "extra_beds_for_children_price": 0,
+        "number_of_extra_babycots": 0,
+        "adults": 1,
+        "total_extra_bed_price": 0,
+        "extra_beds_for_children_price_in_hotel_currency": 0,
+        "number_of_extra_beds_for_children": 0,
+        "extra_babycots_price_in_hotel_currency": 0,
+        "number_of_extra_beds_for_adults": 0,
+        "total_extra_bed_price_in_hotel_currency": 0,
+        "extra_beds_for_adults_price": 0,
+        "number_of_extra_beds_and_babycots_total": 0,
+        "extra_beds_for_adults_price_in_hotel_currency": 0
+      }
+    ],
+    "hotel_text": {},
+    "districts": [
+      2375,
+      3287
+    ],
+    "preferences": [],
+    "hotel_important_information_with_codes": [
+      {
+        "phrase": "Please inform Novotel Mumbai Juhu Beach in advance of your expected arrival time. You can use the Special Requests box when booking, or contact the property directly with the contact details provided in your confirmation.",
+        "executing_phase": 0,
+        "sentence_id": 4
+      },
+      {
+        "phrase": "Guests are required to show a photo identification and credit card upon check-in. Please note that all Special Requests are subject to availability and additional charges may apply.",
+        "executing_phase": 0,
+        "sentence_id": 3
+      },
+      {
+        "sentence_id": 45,
+        "executing_phase": 0,
+        "phrase": "Olio is closed from Fri 17 Mar 2023 until Sun 31 Mar 2024"
+      }
+    ],
+    "rooms": {
+      "19160501": {
+        "private_bathroom_highlight": {
+          "has_highlight": 1
+        },
+        "facilities": [
+          {
+            "name": "Laptop safe",
+            "alt_facilitytype_id": 1,
+            "id": 74,
+            "facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "alt_facilitytype_name": "General"
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "id": 19,
+            "name": "Bathrobe",
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_name": "General",
+            "facilitytype_id": 4,
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_id": 1,
+            "id": 6,
+            "name": "Safety deposit box"
+          },
+          {
+            "facilitytype_name": "Accessibility",
+            "name": "Upper floors accessible by elevator",
+            "id": 132,
+            "alt_facilitytype_id": 19,
+            "alt_facilitytype_name": "Accessibility",
+            "facilitytype_id": 19
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "name": "Flat-screen TV",
+            "id": 75,
+            "alt_facilitytype_id": 6
+          },
+          {
+            "facilitytype_id": 8,
+            "alt_facilitytype_name": "Services",
+            "id": 83,
+            "alt_facilitytype_id": 3,
+            "name": "Wake-up service",
+            "facilitytype_name": "Services & Extras"
+          },
+          {
+            "facilitytype_name": "Room Amenities",
+            "name": "Sofa",
+            "alt_facilitytype_id": 15,
+            "id": 77,
+            "alt_facilitytype_name": "Living Area",
+            "facilitytype_id": 4
+          },
+          {
+            "facilitytype_name": "Room Amenities",
+            "name": "Iron",
+            "alt_facilitytype_id": 1,
+            "id": 15,
+            "alt_facilitytype_name": "General",
+            "facilitytype_id": 4
+          },
+          {
+            "facilitytype_name": "Services & Extras",
+            "name": "Towels",
+            "id": 124,
+            "alt_facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_id": 8
+          },
+          {
+            "facilitytype_name": "Room Amenities",
+            "name": "Ironing facilities",
+            "id": 25,
+            "alt_facilitytype_id": 1,
+            "alt_facilitytype_name": "General",
+            "facilitytype_id": 4
+          },
+          {
+            "id": 27,
+            "alt_facilitytype_id": 5,
+            "name": "Free toiletries",
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "name": "Additional toilet",
+            "id": 72,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_name": "Room Amenities",
+            "facilitytype_id": 4,
+            "facilitytype_name": "Room Amenities",
+            "id": 184,
+            "alt_facilitytype_id": 4,
+            "name": "Socket near the bed"
+          },
+          {
+            "name": "Tea/Coffee maker",
+            "id": 1,
+            "alt_facilitytype_id": 7,
+            "facilitytype_name": "Food & Drink",
+            "facilitytype_id": 7,
+            "alt_facilitytype_name": "Food & Drink"
+          },
+          {
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Slippers",
+            "id": 43,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "id": 12,
+            "name": "Hairdryer",
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "alt_facilitytype_id": 6,
+            "id": 8,
+            "name": "TV"
+          },
+          {
+            "alt_facilitytype_id": 17,
+            "id": 125,
+            "name": "Linen",
+            "facilitytype_name": "Services & Extras",
+            "facilitytype_id": 8,
+            "alt_facilitytype_name": "Bedroom"
+          },
+          {
+            "name": "Minibar",
+            "id": 3,
+            "alt_facilitytype_id": 7,
+            "facilitytype_name": "Food & Drink",
+            "facilitytype_id": 7,
+            "alt_facilitytype_name": "Food & Drink"
+          },
+          {
+            "name": "City view",
+            "alt_facilitytype_id": 14,
+            "id": 121,
+            "facilitytype_name": "Outdoor & View",
+            "facilitytype_id": 9,
+            "alt_facilitytype_name": "View"
+          },
+          {
+            "facilitytype_id": 4,
+            "alt_facilitytype_name": "General",
+            "name": "Pants press",
+            "id": 18,
+            "alt_facilitytype_id": 1,
+            "facilitytype_name": "Room Amenities"
+          },
+          {
+            "facilitytype_name": "Bathroom",
+            "name": "Toilet",
+            "id": 31,
+            "alt_facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_id": 5
+          },
+          {
+            "alt_facilitytype_name": "Kitchen",
+            "facilitytype_id": 7,
+            "facilitytype_name": "Food & Drink",
+            "name": "Electric kettle",
+            "id": 86,
+            "alt_facilitytype_id": 12
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "name": "Telephone",
+            "alt_facilitytype_id": 6,
+            "id": 9
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 4,
+            "name": "Shower"
+          },
+          {
+            "name": "Bidet",
+            "alt_facilitytype_id": 5,
+            "id": 100,
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "name": "Cable channels",
+            "alt_facilitytype_id": 6,
+            "id": 68,
+            "facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "alt_facilitytype_name": "Media & Technology"
+          },
+          {
+            "facilitytype_id": 4,
+            "alt_facilitytype_name": "Bedroom",
+            "id": 95,
+            "alt_facilitytype_id": 17,
+            "name": "Wardrobe or closet",
+            "facilitytype_name": "Room Amenities"
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "name": "Toilet paper",
+            "alt_facilitytype_id": 5,
+            "id": 141
+          },
+          {
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_id": 1,
+            "id": 73,
+            "name": "Interconnected room(s) available",
+            "alt_facilitytype_name": "General",
+            "facilitytype_id": 4
+          },
+          {
+            "facilitytype_id": 4,
+            "alt_facilitytype_name": "General",
+            "name": "Air conditioning",
+            "alt_facilitytype_id": 1,
+            "id": 11,
+            "facilitytype_name": "Room Amenities"
+          },
+          {
+            "facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 38,
+            "name": "Private bathroom",
+            "facilitytype_name": "Bathroom"
+          }
+        ],
+        "photos": [
+          {
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "last_update_date": "2020-08-24 11:50:19",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "ratio": 1.88058298072402,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "photo_id": 266814459,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "new_order": 0
+          },
+          {
+            "new_order": 1,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "ratio": 1.72562553925798,
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "last_update_date": "2020-08-24 11:50:22",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "photo_id": 266814465,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o="
+          },
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "photo_id": 266814529,
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "last_update_date": "2020-08-24 11:50:45",
+            "ratio": 1.79131213613972,
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "new_order": 2
+          },
+          {
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "new_order": 3,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "photo_id": 266814538,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "last_update_date": "2020-08-24 11:50:46",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "ratio": 1.49981252343457
+          }
+        ],
+        "is_high_floor_guaranteed": 0,
+        "bed_configurations": [
+          {
+            "bed_types": [
+              {
+                "bed_type": 1,
+                "name_with_count": "2 single beds",
+                "count": 2,
+                "description": "90-130 cm wide",
+                "name": "Single bed(s)",
+                "description_imperial": "35-51 inches wide",
+                "description_localized": null
+              }
+            ]
+          }
+        ],
+        "cribs_extra_beds": {
+          "extra_beds": {
+            "all_free": 0,
+            "max_count": 1,
+            "ages": [
+              16,
+              17,
+              255
+            ]
+          }
+        },
+        "highlights": [
+          {
+            "icon": "wifi",
+            "translated_name": "Free WiFi"
+          },
+          {
+            "icon": "city",
+            "translated_name": "City view",
+            "id": 121
+          },
+          {
+            "id": 159,
+            "translated_name": "Pool with a view",
+            "icon": "checkmark"
+          },
+          {
+            "icon": "snowflake",
+            "translated_name": "Air conditioning",
+            "id": 11
+          },
+          {
+            "icon": "bath",
+            "id": 38,
+            "translated_name": "Ensuite bathroom"
+          },
+          {
+            "translated_name": "Flat-screen TV",
+            "id": 75,
+            "icon": "screen"
+          },
+          {
+            "id": 3,
+            "translated_name": "Minibar",
+            "icon": "checkmark"
+          }
+        ],
+        "children_and_beds_text": {
+          "age_intervals": [
+            {
+              "types_by_price": [
+                [
+                  "crib"
+                ]
+              ],
+              "group_by_price": {
+                "free,per_night,0": [
+                  "crib"
+                ]
+              },
+              "max_age": 3,
+              "min_age": 0,
+              "crib": {
+                "id": 15118170,
+                "price_type_n": 0,
+                "price_mode": "per_night",
+                "price_type": "free",
+                "price": 0,
+                "price_mode_n": 0
+              }
+            },
+            {
+              "max_age": 255,
+              "min_age": 16,
+              "group_by_price": {
+                "fixed,per_night,21.80": [
+                  "extra_bed"
+                ]
+              },
+              "extra_bed": {
+                "id": 15118171,
+                "price_mode": "per_night",
+                "price_type_n": 2,
+                "price": "€ 21.80",
+                "price_mode_n": 0,
+                "price_type": "fixed"
+              },
+              "types_by_price": [
+                [
+                  "extra_bed"
+                ]
+              ]
+            }
+          ],
+          "allow_children": 1,
+          "children_at_the_property": [
+            {
+              "text": "Children of any age are welcome.",
+              "highlight": 0
+            },
+            {
+              "text": "Children aged 16 years and above are considered adults at this property.",
+              "highlight": 0
+            },
+            {
+              "text": "To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.",
+              "highlight": 1
+            }
+          ],
+          "cribs_and_extra_beds": [
+            {
+              "highlight": 0,
+              "text": "The price in INR has been converted to show you the approximate price in EUR."
+            },
+            {
+              "highlight": 0,
+              "text": "Supplements are not calculated automatically in the total costs and will have to be paid for separately during your stay."
+            },
+            {
+              "text": "The maximum number of cots, extra beds and children allowed in existing beds may vary depending on the option you book.",
+              "highlight": 0
+            },
+            {
+              "text": "All cots and extra beds are subject to availability.",
+              "highlight": 0
+            }
+          ]
+        },
+        "private_bathroom_count": 0,
+        "description": "This spacious, air-conditioned room has views of Mumbai, a flat-screen TV, and a rain shower. This room is newly renovated."
+      }
+    },
+    "block": [
+      {
+        "nr_children": 0,
+        "refundable": 1,
+        "room_name": "Superior Twin Room with City View with 15% discount on Food & Beverage",
+        "room_id": 19160501,
+        "name_without_policy": "Superior Twin Room with City View with 15% discount on Food & Beverage",
+        "number_of_bedrooms": 0,
+        "refundable_until_epoch": 1700224199,
+        "paymentterms": {
+          "cancellation": {
+            "description": "You may cancel free of charge until 18:00 on the day of arrival. You will be charged the total price of the reservation if you cancel after 18:00 on the day of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee.",
+            "info": {
+              "time_before_midnight": null,
+              "timezone": "IST",
+              "date": "17 November 2023",
+              "time": "18:00",
+              "date_before": "16 November 2023",
+              "is_midnight": "",
+              "refundable": 1,
+              "date_raw": "2023-11-17 18:00:00",
+              "timezone_offset": "19800",
+              "date_before_raw": "2023-11-16"
+            },
+            "guaranteed_non_refundable": 0,
+            "type_translation": "Free cancellation",
+            "bucket": "SMP_FULLY_FLEX",
+            "type": "free_cancellation",
+            "non_refundable_anymore": 0,
+            "timeline": {
+              "u_currency_code": "EUR",
+              "currency_code": "INR",
+              "stages": [
+                {
+                  "limit_from": "27 October 2023 01:17",
+                  "text": "Free cancellation until 17:59 on 17 Nov",
+                  "limit_from_date": "27 October 2023",
+                  "fee_remaining": 12000,
+                  "fee_pretty": "INR 0",
+                  "stage_translation": "Free to cancel",
+                  "text_refundable": "You'll get a full refund if you cancel before 17:59 on 17 November 2023.",
+                  "b_number": 0,
+                  "u_stage_fee_pretty": "&#x20AC; 0",
+                  "limit_from_raw": "2023-10-27 01:17:06",
+                  "fee": 0,
+                  "is_effective": 1,
+                  "limit_until_time": "17:59",
+                  "b_state": "FREE",
+                  "effective_number": 0,
+                  "fee_rounded": 0,
+                  "current_stage": 1,
+                  "u_fee_remaining_pretty": "&#x20AC; 136",
+                  "u_fee_remaining": "136.26",
+                  "date_until": "2023-11-17 17:59:59 +0530",
+                  "is_free": 1,
+                  "limit_until": "17 November 2023 17:59",
+                  "u_stage_fee": "0.00",
+                  "limit_until_date": "17 November 2023",
+                  "u_fee": "0.00",
+                  "limit_until_raw": "2023-11-17 17:59:59",
+                  "u_fee_pretty": "&#x20AC; 0",
+                  "limit_from_time": "01:17",
+                  "stage_fee_pretty": "INR 0",
+                  "fee_remaining_pretty": "INR 12000",
+                  "limit_timezone": "Mumbai",
+                  "stage_fee": 0
+                },
+                {
+                  "limit_from_time": "18:00",
+                  "u_fee_pretty": "&#x20AC; 136",
+                  "u_fee": "136.26",
+                  "limit_until_date": "17 November 2023",
+                  "limit_until_raw": "2023-11-17 18:00:00",
+                  "limit_timezone": "Mumbai",
+                  "stage_fee": 12000,
+                  "stage_fee_pretty": "INR 12000",
+                  "fee_remaining_pretty": "INR 0",
+                  "date_from": "2023-11-17 18:00:00 +0530",
+                  "u_fee_remaining": "0.00",
+                  "u_fee_remaining_pretty": "&#x20AC; 0",
+                  "u_stage_fee": "136.26",
+                  "is_free": 0,
+                  "limit_until": "17 November 2023 18:00",
+                  "fee": 12000,
+                  "limit_from_raw": "2023-11-17 18:00:00",
+                  "u_stage_fee_pretty": "&#x20AC; 136",
+                  "is_effective": 1,
+                  "amount": 136.26,
+                  "b_number": 1,
+                  "text_refundable": "If you cancel from 18:00 on 17 November 2023, you will no longer be eligible for a refund.",
+                  "current_stage": 0,
+                  "effective_number": 1,
+                  "b_state": "NONREF",
+                  "limit_until_time": "18:00",
+                  "fee_rounded": 12000,
+                  "text": "From 18:00 on 17 Nov",
+                  "limit_from": "17 November 2023 18:00",
+                  "stage_translation": "No refund if you cancel",
+                  "amount_pretty": "&#x20AC; 136",
+                  "fee_remaining": 0,
+                  "limit_from_date": "17 November 2023",
+                  "fee_pretty": "INR 12000"
+                }
+              ],
+              "policygroup_instance_id": "42/152/-",
+              "nr_stages": 2
+            }
+          },
+          "prepayment": {
+            "description": "You'll pay during your stay.",
+            "simple_translation": "No prepayment",
+            "type_extended": "non_refundable_prepayment",
+            "info": {
+              "timezone_offset": null,
+              "refundable": "anytime",
+              "is_midnight": null,
+              "time": null,
+              "date": null,
+              "date_before": null,
+              "prepayment_at_booktime": 0,
+              "timezone": null,
+              "time_before_midnight": null
+            },
+            "extended_type_translation": "No payment needed today",
+            "type": "no_prepayment",
+            "type_translation": "No payment needed today",
+            "timeline": {
+              "u_currency_code": "EUR",
+              "currency_code": "INR",
+              "policygroup_instance_id": "42/152/-",
+              "stages": [
+                {
+                  "amount_pretty": "&#x20AC; 0",
+                  "fee_remaining": 12000,
+                  "limit_from_date": "27 October 2023",
+                  "fee_pretty": "INR 0",
+                  "text": "Before you stay you'll pay",
+                  "limit_from": "27 October 2023 01:17",
+                  "current_stage": 1,
+                  "effective_number": 0,
+                  "b_state": "FREE",
+                  "limit_until_time": "23:59",
+                  "fee_rounded": 0,
+                  "limit_from_raw": "2023-10-27 01:17:06",
+                  "fee": 0,
+                  "u_stage_fee_pretty": "&#x20AC; 0",
+                  "amount": "0.00",
+                  "is_effective": 1,
+                  "b_number": 0,
+                  "u_stage_fee": "0.00",
+                  "is_free": 1,
+                  "limit_until": "17 November 2023 23:59",
+                  "u_fee_remaining": "136.26",
+                  "u_fee_remaining_pretty": "&#x20AC; 136",
+                  "stage_fee": 0,
+                  "limit_timezone": "Mumbai",
+                  "stage_fee_pretty": "INR 0",
+                  "fee_remaining_pretty": "INR 12000",
+                  "limit_from_time": "01:17",
+                  "u_fee_pretty": "&#x20AC; 0",
+                  "u_fee": "0.00",
+                  "limit_until_date": "17 November 2023",
+                  "limit_until_raw": "2023-11-17 23:59:59"
+                },
+                {
+                  "after_checkin": 1,
+                  "amount": "136.26",
+                  "text": "At the property you'll pay",
+                  "amount_pretty": "&#x20AC; 136",
+                  "is_free": 0
+                }
+              ],
+              "nr_stages": 2
+            }
+          }
+        },
+        "room_count": 14,
+        "room_surface_in_m2": 29,
+        "smoking": 2,
+        "max_children_free_age": 17,
+        "mealplan": "Enjoy a convenient breakfast at the property for EUR 15 per person per night.\nEnjoy a convenient dinner at the property for EUR 26 per person per night.",
+        "is_domestic_rate": 0,
+        "must_reserve_free_parking": 1,
+        "children_ages": [],
+        "is_block_fit": 1,
+        "max_occupancy": "2",
+        "genius_discount_percentage": 0,
+        "bh_room_highlights": [],
+        "extrabed_available": 0,
+        "deposit_required": 0,
+        "breakfast_included": 0,
+        "block_id": "19160501_95454962_2_34_0",
+        "roomtype_id": 8,
+        "all_inclusive": 0,
+        "refundable_until": "2023-11-17 17:59:59 +0530",
+        "name": "Superior Twin Room with City View with 15% discount on Food & Beverage - Free cancellation",
+        "is_last_minute_deal": 0,
+        "can_reserve_free_parking": 1,
+        "babycots_available": 0,
+        "is_flash_deal": 0,
+        "room_surface_in_feet2": 312.1534016,
+        "babycots_available_amount": null,
+        "number_of_bathrooms": 0,
+        "nr_adults": 2,
+        "half_board": 0,
+        "extrabed_available_amount": null,
+        "is_secret_deal": 0,
+        "pod_ios_migrate_policies_to_smp_fullon": 0,
+        "is_smart_deal": 0,
+        "block_text": {
+          "policies": [
+            {
+              "class": "POLICY_CANCELLATION",
+              "content": "You may cancel free of charge until 18:00 on the day of arrival. You will be charged the total price of the reservation if you cancel after 18:00 on the day of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee."
+            },
+            {
+              "content": "No prepayment is needed.",
+              "class": "POLICY_PREPAY"
+            },
+            {
+              "mealplan_vector": "34",
+              "content": "Enjoy a convenient breakfast at the property for EUR 15 per person per night.\nEnjoy a convenient dinner at the property for EUR 26 per person per night.",
+              "class": "POLICY_HOTEL_MEALPLAN"
+            },
+            {
+              "class": "POLICY_TITLE",
+              "content": "Special conditions"
+            }
+          ]
+        },
+        "deals": {
+          "deal_attributes": {
+            "has_secret_channel_option": 0
+          }
+        },
+        "is_genius_deal": null,
+        "full_board": 0,
+        "max_children_free": 2
+      }
+    ]
+  }
+}

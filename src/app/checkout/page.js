@@ -90,6 +90,18 @@ function CheckoutForm() {
                     <div><strong>Time:</strong> {bookingData.time}</div>
                   </div>
                 </div>
+              ) : bookingData.type === 'hotel' ? (
+                <div>
+                  <h3 style={{ marginBottom: '15px' }}>Hotel Booking</h3>
+                  <div style={{ display: 'grid', gap: '10px', marginBottom: '20px' }}>
+                    <div><strong>Hotel:</strong> {bookingData.hotelName}</div>
+                    <div><strong>Destination:</strong> {bookingData.destination}</div>
+                    <div><strong>Check-in:</strong> {bookingData.checkIn}</div>
+                    <div><strong>Check-out:</strong> {bookingData.checkOut}</div>
+                    <div><strong>Guests:</strong> {bookingData.adults} Adults{bookingData.children > 0 ? `, ${bookingData.children} Children` : ''}</div>
+                    <div><strong>Rooms:</strong> {bookingData.rooms}</div>
+                  </div>
+                </div>
               ) : (
                 <div>
                   <h3 style={{ marginBottom: '15px' }}>Tour Package</h3>
@@ -161,7 +173,14 @@ function CheckoutForm() {
                   <img 
                     src="/qrcode.png" 
                     alt="UPI QR Code" 
-                    style={{ width: '250px', height: '250px', border: '2px solid #ddd', borderRadius: '12px' }}
+                    style={{ 
+                      width: '300px', 
+                      height: '300px', 
+                      border: '2px solid #ddd', 
+                      borderRadius: '12px',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
                   />
                   <p style={{ marginTop: '15px', color: '#666' }}>
                     Pay using any UPI app (GPay, PhonePe, Paytm, etc.)

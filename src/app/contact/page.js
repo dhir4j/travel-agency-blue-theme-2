@@ -22,7 +22,7 @@ function ContactForm() {
       setFormData(prev => ({
         ...prev,
         message: decodeURIComponent(inquiry),
-        subject: inquiry.includes('Taxi Booking') ? 'Taxi Booking Request' : 'Tour Inquiry'
+        subject: inquiry.includes('Taxi Booking') ? 'Taxi Booking Request' : inquiry.includes('Hotel Booking') ? 'Hotel Booking Request' : 'Tour Inquiry'
       }))
     }
   }, [searchParams])
