@@ -70,16 +70,6 @@ export default function Popular() {
                     <span style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--bright-navy-blue)' }}>{dest.price}</span>
                     <span style={{ fontSize: '14px', color: 'var(--sonic-silver)' }}>{dest.duration}</span>
                   </div>
-                  <p style={{ 
-                    fontSize: '14px', 
-                    fontStyle: 'italic', 
-                    color: 'var(--sonic-silver)', 
-                    marginTop: '10px',
-                    borderTop: '1px solid #eee',
-                    paddingTop: '10px'
-                  }}>
-                    &quot;{reviews[index]}&quot;
-                  </p>
                 </div>
               </div>
             </li>

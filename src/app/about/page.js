@@ -13,16 +13,9 @@ export default function AboutPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="about-hero" style={{
-          background: 'linear-gradient(135deg, hsl(214, 57%, 51%) 0%, hsl(214, 72%, 33%) 100%)',
-          padding: '120px 0 80px',
-          color: 'white',
-          textAlign: 'center'
-        }}>
+        <section className="tours-hero-modern">
           <div className="container">
-            <h1 className="h1" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '20px', fontWeight: '700' }}>
-              About CrossMap Tours and Travels
-            </h1>
+            <h1 className="h1">About CrossMap Tours and Travels</h1>
             <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95' }}>
               Your trusted partner for domestic tours and travel solutions in India
             </p>

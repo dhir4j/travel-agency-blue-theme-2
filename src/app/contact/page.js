@@ -33,16 +33,9 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section style={{
-          background: 'linear-gradient(135deg, hsl(214, 57%, 51%) 0%, hsl(214, 72%, 33%) 100%)',
-          padding: '120px 0 80px',
-          color: 'white',
-          textAlign: 'center'
-        }}>
+        <section className="tours-hero-modern">
           <div className="container">
-            <h1 className="h1" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '20px', fontWeight: '700' }}>
-              Get in Touch
-            </h1>
+            <h1 className="h1">Get in Touch</h1>
             <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95' }}>
               Find us at our office or send us a message
             </p>
