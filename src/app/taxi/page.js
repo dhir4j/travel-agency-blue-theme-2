@@ -29,7 +29,7 @@ export default function TaxiPage() {
                 Taxi & Cab Services
               </h1>
               <p style={{ fontSize: '1.2rem', marginBottom: '30px', opacity: '0.95' }}>
-                Coming Soon! We're working on bringing you reliable taxi and cab services.
+                Coming Soon! We&apos;re working on bringing you reliable taxi and cab services.
               </p>
               <p style={{ fontSize: '1.1rem', marginBottom: '40px', opacity: '0.9' }}>
                 For now, please contact us for taxi booking assistance.

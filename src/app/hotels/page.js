@@ -29,7 +29,7 @@ export default function HotelsPage() {
                 Hotel Booking Services
               </h1>
               <p style={{ fontSize: '1.2rem', marginBottom: '30px', opacity: '0.95' }}>
-                Coming Soon! We're working on bringing you the best hotel booking experience.
+                Coming Soon! We&apos;re working on bringing you the best hotel booking experience.
               </p>
               <p style={{ fontSize: '1.1rem', marginBottom: '40px', opacity: '0.9' }}>
                 For now, please contact us for hotel booking assistance.

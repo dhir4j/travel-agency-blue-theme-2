@@ -45,7 +45,7 @@ export default function PrivacyPage() {
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
-                  CrossMap Tours and Travels ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  CrossMap Tours and Travels (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
               </div>
 

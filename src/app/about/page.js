@@ -51,7 +51,7 @@ export default function AboutPage() {
                 }}>
                   CrossMap Tours and Travels is your premier destination for comprehensive travel services across India.
                   We specialize in making your travel dreams come true with carefully curated domestic tour packages
-                  that showcase India's beautiful landscapes, rich culture, and diverse destinations.
+                  that showcase India&apos;s beautiful landscapes, rich culture, and diverse destinations.
                 </p>
                 <p style={{
                   fontSize: '1.1rem',

@@ -23,7 +23,7 @@ export default function CustomerCarePage() {
               Customer Care
             </h1>
             <p style={{ fontSize: '1.2rem', opacity: '0.95' }}>
-              We're here to help you 24/7
+              We&apos;re here to help you 24/7
             </p>
           </div>
         </section>
