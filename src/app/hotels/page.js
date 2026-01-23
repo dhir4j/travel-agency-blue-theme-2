@@ -60,7 +60,7 @@ export default function HotelsPage() {
     setError('')
     
     try {
-      const response = await fetch(`https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=${selectedDestination.dest_id}&search_type=${selectedDestination.dest_type}&adults=${adults}&children_age=${children > 0 ? '0,17' : ''}&room_qty=${rooms}&page_number=1&units=metric&temperature_unit=c&languagecode=en-us&currency_code=INR&location=IN`, {
+      const response = await fetch(`https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=${selectedDestination.dest_id}&search_type=${selectedDestination.search_type}&arrival_date=${checkIn}&departure_date=${checkOut}&adults=${adults}&children_age=${children > 0 ? '0,17' : ''}&room_qty=${rooms}&page_number=1&units=metric&temperature_unit=c&languagecode=en-us&currency_code=INR`, {
         headers: {
           'x-rapidapi-host': 'booking-com15.p.rapidapi.com',
           'x-rapidapi-key': '953c42d675msh29bbf826a0b8a2dp15d12bjsn973de23f3375'
@@ -72,7 +72,7 @@ export default function HotelsPage() {
       if (data.status && data.data?.hotels) {
         setHotels(data.data.hotels)
       } else {
-        setError('No hotels found for this destination and dates.')
+        setError(data.message || 'No hotels found for this destination and dates.')
         setHotels([])
       }
     } catch (error) {
