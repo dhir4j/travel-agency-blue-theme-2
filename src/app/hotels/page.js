@@ -116,12 +116,17 @@ export default function HotelsPage() {
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
               
               {/* Search Form */}
-              <div style={{ background: 'white', padding: '40px', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', marginBottom: '40px' }}>
-                <h2 style={{ marginBottom: '30px', textAlign: 'center' }}>Search Hotels</h2>
+              <div style={{ background: 'white', padding: hotels.length > 0 ? '20px' : '40px', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', marginBottom: '40px' }}>
+                {hotels.length === 0 && <h2 style={{ marginBottom: '30px', textAlign: 'center' }}>Search Hotels</h2>}
                 
-                <div style={{ display: 'grid', gap: '20px', marginBottom: '30px' }}>
+                <div style={{ 
+                  display: 'grid', 
+                  gap: hotels.length > 0 ? '15px' : '20px', 
+                  gridTemplateColumns: hotels.length > 0 ? 'repeat(auto-fit, minmax(200px, 1fr))' : '1fr',
+                  marginBottom: hotels.length > 0 ? '20px' : '30px' 
+                }}>
                   <div style={{ position: 'relative' }}>
-                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Destination</label>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: hotels.length > 0 ? '14px' : '16px' }}>Destination</label>
                     <input
                       type="text"
                       value={destination}
@@ -130,7 +135,7 @@ export default function HotelsPage() {
                         searchDestinations(e.target.value)
                       }}
                       placeholder="Enter destination in India"
-                      style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
+                      style={{ width: '100%', padding: hotels.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: hotels.length > 0 ? '14px' : '16px' }}
                     />
                     {destinationSuggestions.length > 0 && (
                       <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, background: 'white', border: '1px solid #ddd', borderRadius: '8px', zIndex: 10, maxHeight: '200px', overflowY: 'auto' }}>
@@ -152,66 +157,58 @@ export default function HotelsPage() {
                     )}
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Check-in Date</label>
-                      <input
-                        type="date"
-                        value={checkIn}
-                        onChange={(e) => setCheckIn(e.target.value)}
-                        min={new Date().toISOString().split('T')[0]}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Check-out Date</label>
-                      <input
-                        type="date"
-                        value={checkOut}
-                        onChange={(e) => setCheckOut(e.target.value)}
-                        min={checkIn}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      />
-                    </div>
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: hotels.length > 0 ? '14px' : '16px' }}>Check-in</label>
+                    <input
+                      type="date"
+                      value={checkIn}
+                      onChange={(e) => setCheckIn(e.target.value)}
+                      min={new Date().toISOString().split('T')[0]}
+                      style={{ width: '100%', padding: hotels.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: hotels.length > 0 ? '14px' : '16px' }}
+                    />
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Adults</label>
-                      <select
-                        value={adults}
-                        onChange={(e) => setAdults(parseInt(e.target.value))}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      >
-                        {[1,2,3,4,5,6].map(num => (
-                          <option key={num} value={num}>{num}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Children</label>
-                      <select
-                        value={children}
-                        onChange={(e) => setChildren(parseInt(e.target.value))}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      >
-                        {[0,1,2,3,4].map(num => (
-                          <option key={num} value={num}>{num}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Rooms</label>
-                      <select
-                        value={rooms}
-                        onChange={(e) => setRooms(parseInt(e.target.value))}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      >
-                        {[1,2,3,4,5].map(num => (
-                          <option key={num} value={num}>{num}</option>
-                        ))}
-                      </select>
-                    </div>
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: hotels.length > 0 ? '14px' : '16px' }}>Check-out</label>
+                    <input
+                      type="date"
+                      value={checkOut}
+                      onChange={(e) => setCheckOut(e.target.value)}
+                      min={checkIn}
+                      style={{ width: '100%', padding: hotels.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: hotels.length > 0 ? '14px' : '16px' }}
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: hotels.length > 0 ? '14px' : '16px' }}>Guests</label>
+                    <select
+                      value={`${adults}-${children}-${rooms}`}
+                      onChange={(e) => {
+                        const [a, c, r] = e.target.value.split('-').map(Number)
+                        setAdults(a)
+                        setChildren(c)
+                        setRooms(r)
+                      }}
+                      style={{ width: '100%', padding: hotels.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: hotels.length > 0 ? '14px' : '16px' }}
+                    >
+                      <option value="1-0-1">1 Adult, 1 Room</option>
+                      <option value="2-0-1">2 Adults, 1 Room</option>
+                      <option value="2-1-1">2 Adults, 1 Child, 1 Room</option>
+                      <option value="2-2-1">2 Adults, 2 Children, 1 Room</option>
+                      <option value="4-0-2">4 Adults, 2 Rooms</option>
+                      <option value="4-2-2">4 Adults, 2 Children, 2 Rooms</option>
+                    </select>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'end' }}>
+                    <button
+                      onClick={searchHotels}
+                      disabled={!selectedDestination || !checkIn || !checkOut || loading}
+                      className="btn btn-primary"
+                      style={{ width: '100%', padding: hotels.length > 0 ? '10px 20px' : '15px', fontSize: hotels.length > 0 ? '14px' : '16px' }}
+                    >
+                      {loading ? 'Searching...' : 'Search'}
+                    </button>
                   </div>
                 </div>
 
@@ -220,15 +217,6 @@ export default function HotelsPage() {
                     {error}
                   </div>
                 )}
-
-                <button
-                  onClick={searchHotels}
-                  disabled={!selectedDestination || !checkIn || !checkOut || loading}
-                  className="btn btn-primary"
-                  style={{ width: '100%', padding: '15px' }}
-                >
-                  {loading ? 'Searching...' : 'Search Hotels'}
-                </button>
               </div>
 
               {/* Hotels Results */}

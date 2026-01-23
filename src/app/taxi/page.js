@@ -97,12 +97,17 @@ export default function TaxiPage() {
         <section style={{ padding: '80px 0' }}>
           <div className="container">
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <div style={{ background: 'white', padding: '40px', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.1)' }}>
-                <h2 style={{ marginBottom: '30px', textAlign: 'center' }}>Book Your Taxi</h2>
+              <div style={{ background: 'white', padding: taxiResults.length > 0 ? '20px' : '40px', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.1)' }}>
+                {taxiResults.length === 0 && <h2 style={{ marginBottom: '30px', textAlign: 'center' }}>Book Your Taxi</h2>}
                 
-                <div style={{ display: 'grid', gap: '20px', marginBottom: '30px' }}>
+                <div style={{ 
+                  display: 'grid', 
+                  gap: taxiResults.length > 0 ? '15px' : '20px', 
+                  gridTemplateColumns: taxiResults.length > 0 ? 'repeat(auto-fit, minmax(180px, 1fr))' : '1fr',
+                  marginBottom: taxiResults.length > 0 ? '20px' : '30px' 
+                }}>
                   <div style={{ position: 'relative' }}>
-                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Pickup Location</label>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}>Pickup Location</label>
                     <input
                       type="text"
                       value={pickupQuery}
@@ -111,7 +116,7 @@ export default function TaxiPage() {
                         searchLocations(e.target.value, setPickupSuggestions)
                       }}
                       placeholder="Enter pickup location in India"
-                      style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
+                      style={{ width: '100%', padding: taxiResults.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}
                     />
                     {pickupSuggestions.length > 0 && (
                       <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, background: 'white', border: '1px solid #ddd', borderRadius: '8px', zIndex: 10, maxHeight: '200px', overflowY: 'auto' }}>
@@ -134,7 +139,7 @@ export default function TaxiPage() {
                   </div>
 
                   <div style={{ position: 'relative' }}>
-                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Drop-off Location</label>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}>Drop-off Location</label>
                     <input
                       type="text"
                       value={dropoffQuery}
@@ -143,7 +148,7 @@ export default function TaxiPage() {
                         searchLocations(e.target.value, setDropoffSuggestions)
                       }}
                       placeholder="Enter drop-off location in India"
-                      style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
+                      style={{ width: '100%', padding: taxiResults.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}
                     />
                     {dropoffSuggestions.length > 0 && (
                       <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, background: 'white', border: '1px solid #ddd', borderRadius: '8px', zIndex: 10, maxHeight: '200px', overflowY: 'auto' }}>
@@ -165,26 +170,36 @@ export default function TaxiPage() {
                     )}
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Pickup Date</label>
-                      <input
-                        type="date"
-                        value={pickupDate}
-                        onChange={(e) => setPickupDate(e.target.value)}
-                        min={new Date().toISOString().split('T')[0]}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Pickup Time</label>
-                      <input
-                        type="time"
-                        value={pickupTime}
-                        onChange={(e) => setPickupTime(e.target.value)}
-                        style={{ width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '8px' }}
-                      />
-                    </div>
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}>Date</label>
+                    <input
+                      type="date"
+                      value={pickupDate}
+                      onChange={(e) => setPickupDate(e.target.value)}
+                      min={new Date().toISOString().split('T')[0]}
+                      style={{ width: '100%', padding: taxiResults.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}>Time</label>
+                    <input
+                      type="time"
+                      value={pickupTime}
+                      onChange={(e) => setPickupTime(e.target.value)}
+                      style={{ width: '100%', padding: taxiResults.length > 0 ? '10px' : '12px', border: '1px solid #ddd', borderRadius: '8px', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}
+                    />
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'end' }}>
+                    <button
+                      onClick={searchTaxis}
+                      disabled={!selectedPickup || !selectedDropoff || !pickupDate || !pickupTime || loading}
+                      className="btn btn-primary"
+                      style={{ width: '100%', padding: taxiResults.length > 0 ? '10px 20px' : '15px', fontSize: taxiResults.length > 0 ? '14px' : '16px' }}
+                    >
+                      {loading ? 'Searching...' : 'Search'}
+                    </button>
                   </div>
                 </div>
 
@@ -193,15 +208,6 @@ export default function TaxiPage() {
                     {error}
                   </div>
                 )}
-
-                <button
-                  onClick={searchTaxis}
-                  disabled={!selectedPickup || !selectedDropoff || !pickupDate || !pickupTime || loading}
-                  className="btn btn-primary"
-                  style={{ width: '100%', padding: '15px' }}
-                >
-                  {loading ? 'Searching...' : 'Search Taxis'}
-                </button>
               </div>
 
               {taxiResults.length > 0 && (
