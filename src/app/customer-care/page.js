@@ -238,7 +238,7 @@ export default function CustomerCarePage() {
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.7'
                     }}>
-                      You can book a tour package by browsing our tours page, selecting your preferred destination, and clicking "Book Now". Our team will contact you within 24 hours to confirm your booking and payment details.
+                      You can book a tour package by browsing our tours page, selecting your preferred destination, and clicking &quot;Book Now&quot;. Our team will contact you within 24 hours to confirm your booking and payment details.
                     </p>
                   </div>
 
@@ -310,7 +310,7 @@ export default function CustomerCarePage() {
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.7'
                     }}>
-                      Most of our tour packages include accommodations and some meals. Exact inclusions vary by package. Please check the specific tour details or contact our team for complete information about what's included.
+                      Most of our tour packages include accommodations and some meals. Exact inclusions vary by package. Please check the specific tour details or contact our team for complete information about what&apos;s included.
                     </p>
                   </div>
 
