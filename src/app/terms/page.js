@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Terms of Service - CrossMap Tours and Travels',
-  description: 'Terms and conditions for using CrossMap Tours and Travels services.',
+  title: 'Terms of Service - CrossMap Visa Consultants LLP',
+  description: 'Terms and conditions for using CrossMap Visa Consultants LLP services.',
 }
 
 export default function TermsPage() {
@@ -45,7 +45,7 @@ export default function TermsPage() {
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
-                  By accessing and using the services of CrossMap Tours and Travels, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
+                  By accessing and using the services of CrossMap Visa Consultants LLP, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
                 </p>
               </div>
 
@@ -64,7 +64,7 @@ export default function TermsPage() {
                   color: 'hsl(225, 8%, 42%)',
                   marginBottom: '15px'
                 }}>
-                  CrossMap Tours and Travels provides:
+                  CrossMap Visa Consultants LLP provides:
                 </p>
                 <ul style={{
                   fontSize: '1.05rem',
@@ -101,7 +101,7 @@ export default function TermsPage() {
                   color: 'hsl(225, 8%, 42%)',
                   marginTop: '15px'
                 }}>
-                  <strong>Confirmation:</strong> Bookings are confirmed only upon receipt of payment and written confirmation from CrossMap Tours and Travels.
+                  <strong>Confirmation:</strong> Bookings are confirmed only upon receipt of payment and written confirmation from CrossMap Visa Consultants LLP.
                 </p>
                 <p style={{
                   fontSize: '1.05rem',
@@ -153,7 +153,7 @@ export default function TermsPage() {
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
-                  CrossMap Tours and Travels acts as an intermediary between clients and service providers (hotels, airlines, tour operators). We are not liable for:
+                  CrossMap Visa Consultants LLP acts as an intermediary between clients and service providers (hotels, airlines, tour operators). We are not liable for:
                 </p>
                 <ul style={{
                   fontSize: '1.05rem',
@@ -183,7 +183,7 @@ export default function TermsPage() {
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
-                  All content on our website, including text, graphics, logos, and images, is the property of CrossMap Tours and Travels and protected by copyright laws.
+                  All content on our website, including text, graphics, logos, and images, is the property of CrossMap Visa Consultants LLP and protected by copyright laws.
                 </p>
               </div>
 
@@ -231,7 +231,7 @@ export default function TermsPage() {
                   color: 'hsl(225, 8%, 42%)'
                 }}>
                   <p><strong>Email:</strong> info@crossmaptravels.com</p>
-                  <p><strong>Phone:</strong> +91 7347347362</p>
+                  <p><strong>Phone:</strong> +91 9814439633</p>
                   <p><strong>Address:</strong> SCF-33 First Floor, D Block Market, Ranjit Avenue, Amritsar, Punjab</p>
                 </div>
               </div>

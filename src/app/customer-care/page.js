@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Customer Care - CrossMap Tours and Travels',
-  description: 'Get help and support from CrossMap Tours and Travels customer care team.',
+  title: 'Customer Care - CrossMap Visa Consultants LLP',
+  description: 'Get help and support from CrossMap Visa Consultants LLP customer care team.',
 }
 
 export default function CustomerCarePage() {
@@ -77,14 +77,14 @@ export default function CustomerCarePage() {
                   }}>
                     Speak with our travel experts
                   </p>
-                  <a href="tel:+917347347362" style={{
+                  <a href="tel:+919814439633" style={{
                     color: 'hsl(214, 57%, 51%)',
                     textDecoration: 'none',
                     fontSize: '1.2rem',
                     fontWeight: '600',
                     display: 'block'
                   }}>
-                    +91 7347347362
+                    +91 9814439633
                   </a>
                   <p style={{
                     fontSize: '0.85rem',

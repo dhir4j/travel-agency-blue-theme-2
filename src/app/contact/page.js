@@ -55,7 +55,7 @@ Message:
 ${formData.message}
 
 ---
-Sent from CrossMap Travels website contact form
+Sent from CrossMap Visa Consultants LLP website contact form
       `)
       
       // Open email client
@@ -216,14 +216,14 @@ Sent from CrossMap Travels website contact form
                   }}>
                     Call Us
                   </h3>
-                  <a href="tel:+917347347362" style={{
+                  <a href="tel:+919814439633" style={{
                     color: 'hsl(214, 57%, 51%)',
                     textDecoration: 'none',
                     fontSize: '1.1rem',
                     fontWeight: '600',
                     display: 'block'
                   }}>
-                    +91 7347347362
+                    +91 9814439633
                   </a>
                 </div>
               </div>
@@ -447,7 +447,7 @@ Sent from CrossMap Travels website contact form
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="CrossMap Tours and Travels Location"
+                  title="CrossMap Visa Consultants LLP Location"
                 ></iframe>
               </div>
             </div>

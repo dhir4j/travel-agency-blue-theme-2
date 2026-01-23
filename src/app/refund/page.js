@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Refund & Cancellation Policy - CrossMap Tours and Travels',
+  title: 'Refund & Cancellation Policy - CrossMap Visa Consultants LLP',
   description: 'Learn about our refund and cancellation policies for tour packages and travel services.',
 }
 
@@ -159,7 +159,7 @@ export default function RefundPage() {
                 }}>
                   <li><strong>Natural disasters or force majeure:</strong> Refund terms will be assessed on a case-by-case basis</li>
                   <li><strong>Medical emergencies:</strong> Supporting documentation required; partial refund may be offered</li>
-                  <li><strong>Cancellation by CrossMap Tours and Travels:</strong> Full refund of all paid amounts</li>
+                  <li><strong>Cancellation by CrossMap Visa Consultants LLP:</strong> Full refund of all paid amounts</li>
                 </ul>
               </div>
 
@@ -190,7 +190,7 @@ export default function RefundPage() {
                   color: 'hsl(225, 8%, 42%)'
                 }}>
                   <strong>Email:</strong> <a href="mailto:support@crossmaptravels.com" style={{ color: 'hsl(214, 57%, 51%)' }}>support@crossmaptravels.com</a><br />
-                  <strong>Phone:</strong> <a href="tel:+917347347362" style={{ color: 'hsl(214, 57%, 51%)' }}>+91 7347347362</a>
+                  <strong>Phone:</strong> <a href="tel:+919814439633" style={{ color: 'hsl(214, 57%, 51%)' }}>+91 9814439633</a>
                 </p>
               </div>
 

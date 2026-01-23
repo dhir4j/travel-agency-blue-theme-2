@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Privacy Policy - CrossMap Tours and Travels',
-  description: 'Privacy Policy for CrossMap Tours and Travels - How we collect, use, and protect your personal information.',
+  title: 'Privacy Policy - CrossMap Visa Consultants LLP',
+  description: 'Privacy Policy for CrossMap Visa Consultants LLP - How we collect, use, and protect your personal information.',
 }
 
 export default function PrivacyPage() {
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
-                  CrossMap Tours and Travels (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  CrossMap Visa Consultants LLP (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
               </div>
 
@@ -232,7 +232,7 @@ export default function PrivacyPage() {
                   color: 'hsl(225, 8%, 42%)'
                 }}>
                   <p><strong>Email:</strong> info@crossmaptravels.com</p>
-                  <p><strong>Phone:</strong> +91 7347347362</p>
+                  <p><strong>Phone:</strong> +91 9814439633</p>
                   <p><strong>Address:</strong> SCF-33 First Floor, D Block Market, Ranjit Avenue, Amritsar, Punjab</p>
                 </div>
               </div>

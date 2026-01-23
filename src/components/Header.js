@@ -31,14 +31,14 @@ export default function Header() {
 
         <div className="header-top">
           <div className="container">
-            <a href="tel:+11234567890" className="helpline-box">
+            <a href="tel:+919814439633" className="helpline-box">
               <div className="icon-box">
                 <ion-icon name="call-outline"></ion-icon>
               </div>
 
               <div className="wrapper">
                 <p className="helpline-title">For Further Inquiries: </p>
-                <p className="helpline-number">+91 7347347362</p>
+                <p className="helpline-number">+91 9814439633</p>
               </div>
             </a>
 

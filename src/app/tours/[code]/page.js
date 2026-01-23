@@ -257,9 +257,9 @@ export default function TourDetail({ params }) {
               <div className={styles.helpCard}>
                 <h3 className={styles.helpTitle}>Need Help?</h3>
                 <p className={styles.helpText}>Our travel experts are here to assist you</p>
-                <a href="tel:+11234567890" className={styles.helpLink}>
+                <a href="tel:+919814439633" className={styles.helpLink}>
                   <ion-icon name="call-outline"></ion-icon>
-                  +1 (123) 456 7890
+                  +91 9814439633
                 </a>
                 <a href="mailto:sales@crossmaptravels.com" className={styles.helpLink}>
                   <ion-icon name="mail-outline"></ion-icon>

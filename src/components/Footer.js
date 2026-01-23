@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="logo-waynex-blue">CrossMap</span>
             </a>
 
-            <p className="footer-text">Your passport to adventure awaits with CrossMap Tours and Travels!</p>
+            <p className="footer-text">Your passport to adventure awaits with CrossMap Visa Consultants LLP!</p>
           </div>
 
           <div className="footer-contact">
@@ -25,7 +25,7 @@ export default function Footer() {
             <ul>
               <li className="contact-item">
                 <ion-icon name="call-outline"></ion-icon>
-                <a href="tel:+917347347362" className="contact-link">+91 7347347362</a>
+                <a href="tel:+919814439633" className="contact-link">+91 9814439633</a>
               </li>
 
               <li className="contact-item">
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            &copy; 2025 <a href="#" target="_blank">CrossMap Tours and Travels</a>. All rights reserved
+            &copy; 2025 <a href="#" target="_blank">CrossMap Visa Consultants LLP</a>. All rights reserved
           </p>
 
           <ul className="footer-bottom-list">
