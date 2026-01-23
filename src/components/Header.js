@@ -94,10 +94,11 @@ export default function Header() {
               <ul className="navbar-list">
                 <li><Link href="/" className="navbar-link" onClick={closeNav}>Home</Link></li>
                 <li><Link href="/tours" className="navbar-link" onClick={closeNav}>Tours</Link></li>
-                <li><Link href="/#about" className="navbar-link" onClick={closeNav}>About us</Link></li>
+                <li><Link href="/hotels" className="navbar-link" onClick={closeNav}>Hotels</Link></li>
+                <li><Link href="/taxi" className="navbar-link" onClick={closeNav}>Taxi</Link></li>
                 <li><Link href="/visa" className="navbar-link" onClick={closeNav}>Visa Services</Link></li>
-                <li><Link href="/#gallery" className="navbar-link" onClick={closeNav}>Gallery</Link></li>
-                <li><Link href="/#contact" className="navbar-link" onClick={closeNav}>Contact us</Link></li>
+                <li><Link href="/contact" className="navbar-link" onClick={closeNav}>Contact</Link></li>
+                <li><Link href="/about" className="navbar-link" onClick={closeNav}>About Us</Link></li>
               </ul>
             </nav>
 

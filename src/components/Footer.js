@@ -25,7 +25,7 @@ export default function Footer() {
             <ul>
               <li className="contact-item">
                 <ion-icon name="call-outline"></ion-icon>
-                <a href="tel:+01123456790" className="contact-link">+01 (123) 456 7890</a>
+                <a href="tel:+917347347362" className="contact-link">+91 7347347362</a>
               </li>
 
               <li className="contact-item">
@@ -35,7 +35,7 @@ export default function Footer() {
 
               <li className="contact-item">
                 <ion-icon name="location-outline"></ion-icon>
-                <address>3145 Koontz, California</address>
+                <address>SCF-33, D Block Market, Ranjit Avenue, Amritsar</address>
               </li>
             </ul>
           </div>
@@ -58,9 +58,10 @@ export default function Footer() {
           </p>
 
           <ul className="footer-bottom-list">
-            <li><a href="#" className="footer-bottom-link">Privacy Policy</a></li>
-            <li><a href="#" className="footer-bottom-link">Terms & Conditions</a></li>
-            <li><a href="#" className="footer-bottom-link">FAQ</a></li>
+            <li><a href="/privacy" className="footer-bottom-link">Privacy Policy</a></li>
+            <li><a href="/terms" className="footer-bottom-link">Terms & Conditions</a></li>
+            <li><a href="/refund" className="footer-bottom-link">Refund & Cancellation</a></li>
+            <li><a href="/customer-care" className="footer-bottom-link">Customer Care</a></li>
           </ul>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'CrossMap Tours and Travels - Journey to Explore World',
-  description: 'Your passport to adventure awaits! Embark on a Journey to Explore World with CrossMap Tours and Travels, where every step reveals a new story.',
-  keywords: 'travel, tours, vacation, holiday, adventure, destinations, CrossMap',
+  title: 'CrossMap Visa Consultants - Tours, Visa Services, Hotels & Taxi',
+  description: 'CrossMap Visa Consultants - Expert visa services for 40+ countries, domestic tour packages across India, hotel bookings, and taxi services. Located in Amritsar, Punjab.',
+  keywords: 'visa consultants, tour packages, domestic tours India, visa services, hotel booking, taxi services, Amritsar travel agency, CrossMap',
 }
 
 export default function RootLayout({ children }) {
