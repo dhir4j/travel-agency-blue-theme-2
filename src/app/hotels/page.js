@@ -4,7 +4,7 @@ import GoTop from '@/components/GoTop'
 
 export const metadata = {
   title: 'Hotel Booking Services - CrossMap',
-  description: 'Find and book the best hotels for your stay with CrossMap Visa Consultants.',
+  description: 'Find and book the best hotels for your stay with CrossMap Tours and Travels.',
 }
 
 export default function HotelsPage() {

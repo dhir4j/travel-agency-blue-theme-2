@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Customer Care - CrossMap Visa Consultants',
-  description: 'Get help and support from CrossMap Visa Consultants customer care team.',
+  title: 'Customer Care - CrossMap Tours and Travels',
+  description: 'Get help and support from CrossMap Tours and Travels customer care team.',
 }
 
 export default function CustomerCarePage() {
@@ -75,7 +75,7 @@ export default function CustomerCarePage() {
                     marginBottom: '15px',
                     fontSize: '0.95rem'
                   }}>
-                    Speak with our support team
+                    Speak with our travel experts
                   </p>
                   <a href="tel:+917347347362" style={{
                     color: 'hsl(214, 57%, 51%)',
@@ -232,13 +232,13 @@ export default function CustomerCarePage() {
                       marginBottom: '10px',
                       color: 'hsl(208, 97%, 12%)'
                     }}>
-                      How long does visa processing take?
+                      How do I book a tour package?
                     </h3>
                     <p style={{
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.7'
                     }}>
-                      Processing time varies by country and visa type. Most visas are processed within 3-15 business days. We provide guaranteed processing times for each destination.
+                      You can book a tour package by browsing our tours page, selecting your preferred destination, and clicking "Book Now". Our team will contact you within 24 hours to confirm your booking and payment details.
                     </p>
                   </div>
 
@@ -304,13 +304,13 @@ export default function CustomerCarePage() {
                       marginBottom: '10px',
                       color: 'hsl(208, 97%, 12%)'
                     }}>
-                      What is CrossMap Protect?
+                      Are meals and accommodations included in tour packages?
                     </h3>
                     <p style={{
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.7'
                     }}>
-                      CrossMap Protect is our customer guarantee program. If your visa is rejected, we refund 100% of our service fees. If delayed, you pay no service fee.
+                      Most of our tour packages include accommodations and some meals. Exact inclusions vary by package. Please check the specific tour details or contact our team for complete information about what's included.
                     </p>
                   </div>
 
@@ -361,14 +361,14 @@ export default function CustomerCarePage() {
                   marginBottom: '30px'
                 }}>
                   <div>
-                    <ion-icon name="document-text-outline" style={{ fontSize: '40px', marginBottom: '10px' }}></ion-icon>
-                    <h4 style={{ marginBottom: '5px', fontWeight: '600' }}>Visa Queries</h4>
-                    <p style={{ fontSize: '0.9rem', opacity: '0.9' }}>Document requirements, processing status</p>
-                  </div>
-                  <div>
                     <ion-icon name="map-outline" style={{ fontSize: '40px', marginBottom: '10px' }}></ion-icon>
                     <h4 style={{ marginBottom: '5px', fontWeight: '600' }}>Tour Bookings</h4>
                     <p style={{ fontSize: '0.9rem', opacity: '0.9' }}>Itinerary, modifications, cancellations</p>
+                  </div>
+                  <div>
+                    <ion-icon name="car-outline" style={{ fontSize: '40px', marginBottom: '10px' }}></ion-icon>
+                    <h4 style={{ marginBottom: '5px', fontWeight: '600' }}>Transportation</h4>
+                    <p style={{ fontSize: '0.9rem', opacity: '0.9' }}>Taxi services, pickups, transfers</p>
                   </div>
                   <div>
                     <ion-icon name="card-outline" style={{ fontSize: '40px', marginBottom: '10px' }}></ion-icon>

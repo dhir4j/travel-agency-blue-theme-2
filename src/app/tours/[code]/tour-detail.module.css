@@ -1,4 +1,4 @@
-/* Tour Detail Page - Modern Design (Matching Visa Page) */
+/* Tour Detail Page - Modern Design */
 
 .heroSection {
   padding: 150px 0 60px;
@@ -62,7 +62,7 @@
   opacity: 1;
 }
 
-/* Dark overlay for better text readability - Matching visa page */
+/* Dark overlay for better text readability */
 .heroMediaContainer::before {
   content: '';
   position: absolute;

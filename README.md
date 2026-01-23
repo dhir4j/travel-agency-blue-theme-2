@@ -9,13 +9,13 @@ A modern, responsive travel and tours website built with Next.js 14, featuring a
 - **Interactive Components**: Dynamic navigation, scroll effects, and interactive elements
 - **Tour Search**: Comprehensive tour search form with date pickers
 - **Popular Destinations**: Showcase of top travel destinations
-- **Package Listings**: Detailed tour packages with pricing and ratings
-- **Visa Services**: Complete visa application services for 40+ countries
-  - Dynamic country-specific visa pages
-  - Video/image backgrounds for each destination
-  - Processing time and pricing information
-  - Required documents checklist
-  - Visa type and validity details
+- **Tour Packages**: 174 curated domestic tour packages across 13 Indian states
+  - Dynamic tour detail pages with full itineraries
+  - Pricing, duration, and inclusion details
+  - Image galleries for each destination
+  - Online booking system
+- **Hotel Booking**: Hotel booking services (coming soon)
+- **Taxi Services**: Reliable taxi and cab services (coming soon)
 - **Photo Gallery**: Beautiful image gallery from travelers
 - **Newsletter Subscription**: Email subscription form in footer
 - **SEO Optimized**: Proper meta tags and semantic HTML
@@ -34,26 +34,32 @@ A modern, responsive travel and tours website built with Next.js 14, featuring a
 CrossMap Travels/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css           # Global styles + visa styles
+│   │   ├── globals.css           # Global styles
 │   │   ├── layout.js             # Root layout
 │   │   ├── page.js               # Home page
-│   │   └── visa/
-│   │       ├── page.js           # All visa services page
-│   │       └── [country]/
-│   │           └── page.js       # Dynamic country visa page
+│   │   ├── tours/                # Tour pages
+│   │   │   ├── page.js           # All tours listing
+│   │   │   └── [code]/           # Dynamic tour detail pages
+│   │   ├── about/                # About Us page
+│   │   ├── contact/              # Contact page
+│   │   ├── hotels/               # Hotels page (coming soon)
+│   │   ├── taxi/                 # Taxi services page (coming soon)
+│   │   ├── privacy/              # Privacy policy
+│   │   ├── terms/                # Terms of service
+│   │   ├── refund/               # Refund & cancellation policy
+│   │   └── customer-care/        # Customer care & FAQs
 │   └── components/
 │       ├── Header.js             # Navigation header
 │       ├── Hero.js               # Hero section
 │       ├── TourSearch.js         # Tour search form
 │       ├── Popular.js            # Popular destinations
 │       ├── Package.js            # Tour packages
-│       ├── VisaServices.js       # Visa services section
 │       ├── Gallery.js            # Photo gallery
 │       ├── CTA.js                # Call to action
 │       ├── Footer.js             # Footer
 │       └── GoTop.js              # Back to top button
 ├── data/
-│   └── data.json                 # Visa data for 40+ countries
+│   └── crossmap_tours_complete.json  # Tour data for 174 packages
 ├── public/                       # Static assets
 ├── package.json                  # Dependencies
 ├── next.config.js                # Next.js configuration
@@ -127,24 +133,19 @@ npm start
 - Star ratings
 - Clickable destination cards
 
-### Packages
-- Detailed tour package information
-- Pricing and duration
-- Reviews and ratings
-- Meta information (duration, people, location)
-
-### Visa Services
-- **Home Page Section**: Featured visa services (6 countries)
-- **Main Visa Page** (`/visa`): Complete list of all 40+ countries
-  - Filter by processing time (instant, week, month)
-  - Detailed visa cards with pricing, processing time, and requirements
-- **Individual Country Pages** (`/visa/[country]`):
-  - Video or image hero backgrounds
-  - Processing time and cost breakdown
-  - Complete visa information (type, validity, entry, stay duration)
-  - Required documents checklist
-  - Application process steps
-  - Dynamic routing for all countries
+### Tour Packages
+- **Main Tours Page** (`/tours`): Browse 174 domestic tour packages
+  - Filter by state (13 Indian states)
+  - Search functionality
+  - Pricing and duration display
+  - Tour ratings
+- **Individual Tour Pages** (`/tours/[code]`):
+  - Full itinerary details
+  - Image galleries
+  - Inclusions and exclusions
+  - Pricing breakdown
+  - Online booking form
+  - Dynamic routing for all tours
 
 ### Gallery
 - Responsive image grid
@@ -223,8 +224,8 @@ For questions or support regarding this website:
 - General Inquiries: info@crossmaptravels.com
 - Tour Bookings & Sales: sales@crossmaptravels.com
 - Customer Support: support@crossmaptravels.com
-- Phone: +1 (123) 456 7890
-- Address: 3145 Koontz, California
+- Phone: +91 7347347362
+- Address: SCF-33 First Floor, D Block Market, Ranjit Avenue, Amritsar, Punjab, India
 
 ---
 

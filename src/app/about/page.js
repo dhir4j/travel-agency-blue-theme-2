@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'About Us - CrossMap Visa Consultants',
-  description: 'Learn more about CrossMap Visa Consultants - Your trusted partner for visa services, tours, and travel solutions in India.',
+  title: 'About Us - CrossMap Tours and Travels',
+  description: 'Learn more about CrossMap Tours and Travels - Your trusted partner for domestic tour packages and travel solutions in India.',
 }
 
 export default function AboutPage() {
@@ -21,10 +21,10 @@ export default function AboutPage() {
         }}>
           <div className="container">
             <h1 className="h1" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '20px', fontWeight: '700' }}>
-              About CrossMap Visa Consultants
+              About CrossMap Tours and Travels
             </h1>
             <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95' }}>
-              Your trusted partner for visa services, domestic tours, and travel solutions
+              Your trusted partner for domestic tours and travel solutions in India
             </p>
           </div>
         </section>
@@ -49,9 +49,9 @@ export default function AboutPage() {
                   color: 'hsl(225, 8%, 42%)',
                   marginBottom: '20px'
                 }}>
-                  CrossMap Visa Consultants is your premier destination for comprehensive travel and visa services.
-                  We specialize in making your travel dreams come true, whether you're planning a domestic tour across
-                  India's beautiful landscapes or need expert assistance with visa applications.
+                  CrossMap Tours and Travels is your premier destination for comprehensive travel services across India.
+                  We specialize in making your travel dreams come true with carefully curated domestic tour packages
+                  that showcase India's beautiful landscapes, rich culture, and diverse destinations.
                 </p>
                 <p style={{
                   fontSize: '1.1rem',
@@ -59,7 +59,7 @@ export default function AboutPage() {
                   color: 'hsl(225, 8%, 42%)'
                 }}>
                   With our office located in the heart of Amritsar, Punjab, we bring you personalized service,
-                  expert guidance, and hassle-free solutions for all your travel needs.
+                  expert guidance, and hassle-free solutions for all your travel and tourism needs.
                 </p>
               </div>
 
@@ -80,45 +80,6 @@ export default function AboutPage() {
                   marginTop: '30px'
                 }}>
                   {/* Service Card 1 */}
-                  <div style={{
-                    background: 'white',
-                    padding: '30px',
-                    borderRadius: '15px',
-                    boxShadow: '0 5px 20px rgba(0,0,0,0.08)',
-                    transition: 'transform 0.3s ease'
-                  }}>
-                    <div style={{
-                      width: '60px',
-                      height: '60px',
-                      background: 'hsl(214, 57%, 51%)',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                      fontSize: '30px',
-                      color: 'white'
-                    }}>
-                      <ion-icon name="earth-outline"></ion-icon>
-                    </div>
-                    <h3 style={{
-                      fontSize: '1.3rem',
-                      fontWeight: '600',
-                      marginBottom: '15px',
-                      color: 'hsl(208, 97%, 12%)'
-                    }}>
-                      Visa Consultancy
-                    </h3>
-                    <p style={{
-                      color: 'hsl(225, 8%, 42%)',
-                      lineHeight: '1.6',
-                      fontSize: '1rem'
-                    }}>
-                      Expert visa assistance for 40+ countries with guaranteed processing and 100% refund on rejection.
-                    </p>
-                  </div>
-
-                  {/* Service Card 2 */}
                   <div style={{
                     background: 'white',
                     padding: '30px',
@@ -226,7 +187,7 @@ export default function AboutPage() {
                         Expert Guidance
                       </h4>
                       <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '0.95rem' }}>
-                        Professional visa consultants with years of experience
+                        Professional travel consultants with years of experience
                       </p>
                     </div>
                   </div>

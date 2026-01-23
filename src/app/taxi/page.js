@@ -4,7 +4,7 @@ import GoTop from '@/components/GoTop'
 
 export const metadata = {
   title: 'Taxi Services - CrossMap',
-  description: 'Reliable taxi and cab services for your travel needs with CrossMap Visa Consultants.',
+  description: 'Reliable taxi and cab services for your travel needs with CrossMap Tours and Travels.',
 }
 
 export default function TaxiPage() {

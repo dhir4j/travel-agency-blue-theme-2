@@ -140,23 +140,14 @@ export default function ContactPage() {
                   }}>
                     Email Us
                   </h3>
-                  <a href="mailto:Crossmapvisaconsultant@gmail.com" style={{
+                  <a href="mailto:info@crossmaptravels.com" style={{
                     color: 'hsl(214, 57%, 51%)',
                     textDecoration: 'none',
                     fontSize: '1rem',
                     wordBreak: 'break-word'
                   }}>
-                    Crossmapvisaconsultant@gmail.com
+                    info@crossmaptravels.com
                   </a>
-                  <div style={{ marginTop: '10px' }}>
-                    <a href="mailto:info@crossmaptravels.com" style={{
-                      color: 'hsl(214, 57%, 51%)',
-                      textDecoration: 'none',
-                      fontSize: '0.95rem'
-                    }}>
-                      info@crossmaptravels.com
-                    </a>
-                  </div>
                 </div>
 
                 {/* Phone */}
@@ -387,7 +378,7 @@ export default function ContactPage() {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="CrossMap Visa Consultants Location"
+                  title="CrossMap Tours and Travels Location"
                 ></iframe>
               </div>
             </div>

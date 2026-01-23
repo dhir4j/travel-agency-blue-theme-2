@@ -59,7 +59,7 @@ export default function TourDetail({ params }) {
     <>
       <Header />
       <main>
-        {/* Hero Section - Matching Visa Page Style */}
+        {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className="container">
             <div className={styles.heroMediaContainer}>

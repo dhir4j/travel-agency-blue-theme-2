@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
 export const metadata = {
-  title: 'Refund & Cancellation Policy - CrossMap Visa Consultants',
-  description: 'Learn about our refund and cancellation policies for visa services and tour packages.',
+  title: 'Refund & Cancellation Policy - CrossMap Tours and Travels',
+  description: 'Learn about our refund and cancellation policies for tour packages and travel services.',
 }
 
 export default function RefundPage() {
@@ -31,69 +31,6 @@ export default function RefundPage() {
         <section style={{ padding: '60px 0' }}>
           <div className="container">
             <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-
-              {/* Visa Services */}
-              <div style={{ marginBottom: '50px' }}>
-                <h2 style={{
-                  fontSize: '2rem',
-                  fontWeight: '600',
-                  marginBottom: '25px',
-                  color: 'hsl(208, 97%, 12%)'
-                }}>
-                  Visa Services
-                </h2>
-
-                <div style={{ marginBottom: '30px' }}>
-                  <h3 style={{
-                    fontSize: '1.4rem',
-                    fontWeight: '600',
-                    marginBottom: '15px',
-                    color: 'hsl(214, 57%, 51%)'
-                  }}>
-                    CrossMap Protect Guarantee
-                  </h3>
-                  <p style={{
-                    fontSize: '1.05rem',
-                    lineHeight: '1.8',
-                    color: 'hsl(225, 8%, 42%)',
-                    marginBottom: '15px'
-                  }}>
-                    We offer CrossMap Protect with every visa application:
-                  </p>
-                  <ul style={{
-                    fontSize: '1.05rem',
-                    lineHeight: '1.8',
-                    color: 'hsl(225, 8%, 42%)',
-                    paddingLeft: '30px'
-                  }}>
-                    <li><strong>If Visa Rejected:</strong> 100% refund of our service fees</li>
-                    <li><strong>If Visa Delayed:</strong> No CrossMap service fee charged</li>
-                    <li><strong>Government Fees:</strong> Non-refundable in case of rejection</li>
-                  </ul>
-                </div>
-
-                <div style={{ marginBottom: '30px' }}>
-                  <h3 style={{
-                    fontSize: '1.4rem',
-                    fontWeight: '600',
-                    marginBottom: '15px',
-                    color: 'hsl(214, 57%, 51%)'
-                  }}>
-                    Cancellation by Customer
-                  </h3>
-                  <ul style={{
-                    fontSize: '1.05rem',
-                    lineHeight: '1.8',
-                    color: 'hsl(225, 8%, 42%)',
-                    paddingLeft: '30px'
-                  }}>
-                    <li><strong>Before Document Submission:</strong> Full refund minus processing charges (₹500)</li>
-                    <li><strong>After Document Submission:</strong> 50% refund of service fees</li>
-                    <li><strong>After Application Filing:</strong> No refund</li>
-                    <li><strong>Government Fees:</strong> Non-refundable once paid</li>
-                  </ul>
-                </div>
-              </div>
 
               {/* Tour Packages */}
               <div style={{ marginBottom: '50px' }}>
@@ -182,7 +119,7 @@ export default function RefundPage() {
                   paddingLeft: '30px',
                   marginBottom: '20px'
                 }}>
-                  <li>Submit a written cancellation request to Crossmapvisaconsultant@gmail.com</li>
+                  <li>Submit a written cancellation request to info@crossmaptravels.com</li>
                   <li>Include your booking reference number and reason for cancellation</li>
                   <li>Refunds will be processed within 10-15 business days</li>
                   <li>Refunds will be credited to the original payment method</li>
@@ -222,7 +159,7 @@ export default function RefundPage() {
                 }}>
                   <li><strong>Natural disasters or force majeure:</strong> Refund terms will be assessed on a case-by-case basis</li>
                   <li><strong>Medical emergencies:</strong> Supporting documentation required; partial refund may be offered</li>
-                  <li><strong>Cancellation by CrossMap:</strong> Full refund of all paid amounts</li>
+                  <li><strong>Cancellation by CrossMap Tours and Travels:</strong> Full refund of all paid amounts</li>
                 </ul>
               </div>
 
