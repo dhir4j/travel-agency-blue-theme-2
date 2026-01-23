@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
-import toursData from '../../../data/waynex_tours_complete.json'
+import toursData from '../../../data/crossmap_tours_complete.json'
 import { generateTourSlug, getTourImage } from '@/utils/tourUtils'
 
 export default function ToursPage() {
@@ -26,28 +26,16 @@ export default function ToursPage() {
         })
       })
     }
-    if (toursData.data?.international) {
-      Object.entries(toursData.data.international).forEach(([region, regionTours]) => {
-        regionTours.forEach(tour => {
-          if (tour.code && tour.code.trim() !== '') {
-            tours.push({ ...tour, type: 'international', region })
-          }
-        })
-      })
-    }
     return tours
   }, [])
 
   const regions = useMemo(() => {
-    if (selectedType === 'domestic') return toursData.metadata.domestic_states || []
-    if (selectedType === 'international') return toursData.metadata.international_regions || []
-    return []
-  }, [selectedType])
+    return toursData.metadata.domestic_states || []
+  }, [])
 
   const filteredTours = useMemo(() => {
     let filtered = allTours
 
-    if (selectedType !== 'all') filtered = filtered.filter(t => t.type === selectedType)
     if (selectedRegion !== 'all') filtered = filtered.filter(t => t.region === selectedRegion)
     
     if (searchQuery) {
@@ -106,18 +94,10 @@ export default function ToursPage() {
         <section className="tours-main">
           <div className="container">
             <div className="filters-bar">
-              <select value={selectedType} onChange={(e) => { setSelectedType(e.target.value); setSelectedRegion('all') }}>
-                <option value="all">All Tours</option>
-                <option value="domestic">Domestic</option>
-                <option value="international">International</option>
+              <select value={selectedRegion} onChange={(e) => setSelectedRegion(e.target.value)}>
+                <option value="all">All States</option>
+                {regions.map(r => <option key={r} value={r}>{r}</option>)}
               </select>
-
-              {selectedType !== 'all' && (
-                <select value={selectedRegion} onChange={(e) => setSelectedRegion(e.target.value)}>
-                  <option value="all">All Regions</option>
-                  {regions.map(r => <option key={r} value={r}>{r}</option>)}
-                </select>
-              )}
 
               <select value={priceRange} onChange={(e) => setPriceRange(e.target.value)}>
                 <option value="all">All Prices</option>
@@ -149,7 +129,6 @@ export default function ToursPage() {
                   <Link href={`/tours/${generateTourSlug(tour.name, tour.code)}`} key={tour.code} className="tour-card-premium">
                     <div className="tour-image">
                       <img src={getTourImage(tour)} alt={tour.name} />
-                      <div className="tour-type-badge">{tour.type === 'domestic' ? 'Domestic' : 'International'}</div>
                       <div className="tour-duration-badge">
                         <ion-icon name="time-outline"></ion-icon>
                         {tour.duration}

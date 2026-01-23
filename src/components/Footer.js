@@ -12,10 +12,10 @@ export default function Footer() {
         <div className="container">
           <div className="footer-brand">
             <a href="#" className="logo logo-text">
-              <span className="logo-waynex-blue">Waynex</span>
+              <span className="logo-waynex-blue">CrossMap</span>
             </a>
 
-            <p className="footer-text">Your passport to adventure awaits with Waynex Tours and Travels!</p>
+            <p className="footer-text">Your passport to adventure awaits with CrossMap Tours and Travels!</p>
           </div>
 
           <div className="footer-contact">
@@ -30,7 +30,7 @@ export default function Footer() {
 
               <li className="contact-item">
                 <ion-icon name="mail-outline"></ion-icon>
-                <a href="mailto:info@waynextravels.com" className="contact-link">info@waynextravels.com</a>
+                <a href="mailto:info@crossmaptravels.com" className="contact-link">info@crossmaptravels.com</a>
               </li>
 
               <li className="contact-item">
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            &copy; 2025 <a href="#" target="_blank">Waynex Tours and Travels</a>. All rights reserved
+            &copy; 2025 <a href="#" target="_blank">CrossMap Tours and Travels</a>. All rights reserved
           </p>
 
           <ul className="footer-bottom-list">

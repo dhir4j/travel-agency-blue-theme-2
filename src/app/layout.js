@@ -1,9 +1,9 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Waynex Tours and Travels - Journey to Explore World',
-  description: 'Your passport to adventure awaits! Embark on a Journey to Explore World with Waynex Tours and Travels, where every step reveals a new story.',
-  keywords: 'travel, tours, vacation, holiday, adventure, destinations, Waynex',
+  title: 'CrossMap Tours and Travels - Journey to Explore World',
+  description: 'Your passport to adventure awaits! Embark on a Journey to Explore World with CrossMap Tours and Travels, where every step reveals a new story.',
+  keywords: 'travel, tours, vacation, holiday, adventure, destinations, CrossMap',
 }
 
 export default function RootLayout({ children }) {

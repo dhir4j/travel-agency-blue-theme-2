@@ -400,7 +400,7 @@ function VisaApplicationForm() {
                       </div>
 
                       <div className="upload-note">
-                        <p><strong>Note:</strong> Upload of passport and photograph are not mandatory to complete the visa application form. You can provide us these documents later also on email: contact@waynextravels.com or on WhatsApp +97159518129</p>
+                        <p><strong>Note:</strong> Upload of passport and photograph are not mandatory to complete the visa application form. You can provide us these documents later also on email: support@crossmaptravels.com or on WhatsApp +97159518129</p>
                       </div>
                     </div>
 

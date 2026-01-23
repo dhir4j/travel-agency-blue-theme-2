@@ -6,21 +6,16 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
-import toursData from '../../../../data/waynex_tours_complete.json'
+import toursData from '../../../../data/crossmap_tours_complete.json'
 import { extractCodeFromSlug, getTourImage } from '@/utils/tourUtils'
 import styles from './tour-detail.module.css'
 
 function findTourByCode(code) {
-  const { domestic, international } = toursData.data
+  const { domestic } = toursData.data
 
   for (const region in domestic) {
     const tour = domestic[region].find(t => t.code === code)
     if (tour) return { ...tour, type: 'domestic', region }
-  }
-
-  for (const region in international) {
-    const tour = international[region].find(t => t.code === code)
-    if (tour) return { ...tour, type: 'international', region }
   }
 
   return null
@@ -141,10 +136,10 @@ export default function TourDetail({ params }) {
                 </div>
               </div>
 
-              {/* Why Tour With Waynex */}
+              {/* Why Tour With CrossMap */}
               {tour.why_tour_with_waynex?.length > 0 && (
                 <div className={styles.detailCard}>
-                  <h2 className={styles.cardTitle}>Why Tour With Waynex?</h2>
+                  <h2 className={styles.cardTitle}>Why Tour With CrossMap?</h2>
                   <div className={styles.featureList}>
                     {tour.why_tour_with_waynex.slice(0, 8).map((item, index) => (
                       <div key={index} className={styles.featureItem}>
@@ -254,7 +249,7 @@ export default function TourDetail({ params }) {
                   </div>
                   <div className={styles.infoRow}>
                     <ion-icon name="globe-outline" className={styles.infoIcon}></ion-icon>
-                    <span>{tour.type === 'domestic' ? 'Domestic' : 'International'}</span>
+                    <span>India Tour</span>
                   </div>
                 </div>
               </div>
@@ -265,6 +260,10 @@ export default function TourDetail({ params }) {
                 <a href="tel:+11234567890" className={styles.helpLink}>
                   <ion-icon name="call-outline"></ion-icon>
                   +1 (123) 456 7890
+                </a>
+                <a href="mailto:sales@crossmaptravels.com" className={styles.helpLink}>
+                  <ion-icon name="mail-outline"></ion-icon>
+                  sales@crossmaptravels.com
                 </a>
               </div>
             </aside>

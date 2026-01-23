@@ -43,7 +43,7 @@ export default function Header() {
             </a>
 
             <Link href="/" className="logo logo-text">
-              <span className="logo-waynex">Waynex</span>
+              <span className="logo-waynex">CrossMap</span>
             </Link>
 
             <div className="header-btn-group">
@@ -83,7 +83,7 @@ export default function Header() {
             <nav className={`navbar ${isNavOpen ? 'active' : ''}`}>
               <div className="navbar-top">
                 <Link href="/" className="logo logo-text">
-                  <span className="logo-waynex-blue">Waynex</span>
+                  <span className="logo-waynex-blue">CrossMap</span>
                 </Link>
 
                 <button className="nav-close-btn" aria-label="Close Menu" onClick={toggleNav}>

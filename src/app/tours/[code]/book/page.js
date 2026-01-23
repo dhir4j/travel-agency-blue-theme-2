@@ -6,21 +6,16 @@ import { notFound } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
-import toursData from '../../../../../data/waynex_tours_complete.json'
+import toursData from '../../../../../data/crossmap_tours_complete.json'
 import { extractCodeFromSlug } from '@/utils/tourUtils'
 import styles from './booking.module.css'
 
 function findTourByCode(code) {
-  const { domestic, international } = toursData.data
+  const { domestic } = toursData.data
 
   for (const region in domestic) {
     const tour = domestic[region].find(t => t.code === code)
     if (tour) return { ...tour, type: 'domestic', region }
-  }
-
-  for (const region in international) {
-    const tour = international[region].find(t => t.code === code)
-    if (tour) return { ...tour, type: 'international', region }
   }
 
   return null
@@ -402,7 +397,7 @@ function BookingFormContent({ code }) {
                   </div>
                   <div className={styles.sidebarItem}>
                     <h4>Tour Type</h4>
-                    <p className={styles.highlight}>{tour.type === 'domestic' ? 'Domestic' : 'International'}</p>
+                    <p className={styles.highlight}>India Tour</p>
                   </div>
                 </div>
               </div>

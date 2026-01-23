@@ -251,11 +251,19 @@ export default function CountryVisaPage({ params }) {
                     <div className="protection-badge">
                       <div className="protection-header">
                         <ion-icon name="shield-outline"></ion-icon>
-                        <span>Waynex Protect</span>
+                        <span>CrossMap Protect</span>
                         <span className="included-badge">Included!</span>
                       </div>
-                      <p className="protection-text">If Visa Delayed — No Waynex Fee</p>
+                      <p className="protection-text">If Visa Delayed — No CrossMap Fee</p>
                       <p className="protection-text">If Rejected — 100% Refund</p>
+                    </div>
+
+                    <div className="contact-support" style={{ marginTop: '20px', padding: '15px', background: '#f8f9fa', borderRadius: '10px', textAlign: 'center' }}>
+                      <p style={{ fontSize: '14px', marginBottom: '10px', color: '#666' }}>Need assistance?</p>
+                      <a href="mailto:support@crossmaptravels.com" style={{ color: 'hsl(214, 57%, 51%)', textDecoration: 'none', fontWeight: '600', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
+                        <ion-icon name="mail-outline"></ion-icon>
+                        support@crossmaptravels.com
+                      </a>
                     </div>
                   </div>
                 </div>

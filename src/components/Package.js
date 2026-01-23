@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import toursData from '../../data/waynex_tours_complete.json'
+import toursData from '../../data/crossmap_tours_complete.json'
 import { generateTourSlug, getTourImage } from '@/utils/tourUtils'
 
 export default function Package() {
-  // Get featured tours from the JSON data
+  // Get featured tours from the JSON data - showing top 3 domestic tours
   const featuredTours = [
-    ...toursData.data.domestic['Andaman and Nicobar Islands'].slice(0, 1),
-    ...toursData.data.international['Asia'].slice(0, 1),
-    ...toursData.data.international['Europe'].slice(0, 1)
+    ...toursData.data.domestic['Andaman and Nicobar Islands']?.slice(0, 1) || [],
+    ...toursData.data.domestic['Rajasthan']?.slice(0, 1) || [],
+    ...toursData.data.domestic['Kerala']?.slice(0, 1) || []
   ]
 
   return (

@@ -1,4 +1,4 @@
-# Waynex Tours and Travels
+# CrossMap Tours and Travels
 
 A modern, responsive travel and tours website built with Next.js 14, featuring a beautiful UI design with smooth animations and interactive components.
 
@@ -31,7 +31,7 @@ A modern, responsive travel and tours website built with Next.js 14, featuring a
 ## Project Structure
 
 ```
-Waynex Travels/
+CrossMap Travels/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css           # Global styles + visa styles
@@ -71,7 +71,7 @@ Waynex Travels/
 
 1. Navigate to the project directory:
 ```bash
-cd "Waynex Travels"
+cd "CrossMap Travels"
 ```
 
 2. Install dependencies:
@@ -215,12 +215,14 @@ Place custom images in the `public/` directory and reference them using relative
 
 ## License
 
-This project is created for Waynex Tours and Travels.
+This project is created for CrossMap Tours and Travels.
 
 ## Contact
 
 For questions or support regarding this website:
-- Email: info@waynextravels.com
+- General Inquiries: info@crossmaptravels.com
+- Tour Bookings & Sales: sales@crossmaptravels.com
+- Customer Support: support@crossmaptravels.com
 - Phone: +1 (123) 456 7890
 - Address: 3145 Koontz, California
 

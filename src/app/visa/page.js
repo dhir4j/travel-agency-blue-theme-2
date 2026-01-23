@@ -5,8 +5,8 @@ import GoTop from '@/components/GoTop'
 import visaData from '../../../data/data.json'
 
 export const metadata = {
-  title: 'Visa Services - Waynex Tours and Travels',
-  description: 'Get your visa easily with Waynex Tours and Travels. We provide visa services for destinations worldwide.',
+  title: 'Visa Services - CrossMap Tours and Travels',
+  description: 'Get your visa easily with CrossMap Tours and Travels. We provide visa services for destinations worldwide.',
 }
 
 export default function VisaPage() {
