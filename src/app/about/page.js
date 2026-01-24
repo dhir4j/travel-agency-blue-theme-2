@@ -37,7 +37,7 @@ export default function AboutPage() {
                   Who We Are
                 </h2>
                 <p style={{
-                  fontSize: '1.1rem',
+                  fontSize: '1.125rem',
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)',
                   marginBottom: '20px'
@@ -47,7 +47,7 @@ export default function AboutPage() {
                   that showcase India&apos;s beautiful landscapes, rich culture, and diverse destinations.
                 </p>
                 <p style={{
-                  fontSize: '1.1rem',
+                  fontSize: '1.125rem',
                   lineHeight: '1.8',
                   color: 'hsl(225, 8%, 42%)'
                 }}>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                     <p style={{
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.6',
-                      fontSize: '1rem'
+                      fontSize: '1.0625rem'
                     }}>
                       Curated tour packages across India covering 174+ destinations in 13 states with expert guides.
                     </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                     <p style={{
                       color: 'hsl(225, 8%, 42%)',
                       lineHeight: '1.6',
-                      fontSize: '1rem'
+                      fontSize: '1.0625rem'
                     }}>
                       Complete travel solutions including hotel bookings, taxi services, and travel planning.
                     </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                       <h4 style={{ fontWeight: '600', marginBottom: '5px', color: 'hsl(208, 97%, 12%)' }}>
                         Expert Guidance
                       </h4>
-                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '0.95rem' }}>
+                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '1rem' }}>
                         Professional travel consultants with years of experience
                       </p>
                     </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                       <h4 style={{ fontWeight: '600', marginBottom: '5px', color: 'hsl(208, 97%, 12%)' }}>
                         Hassle-Free Process
                       </h4>
-                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '0.95rem' }}>
+                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '1rem' }}>
                         End-to-end support for all your travel needs
                       </p>
                     </div>
@@ -213,7 +213,7 @@ export default function AboutPage() {
                       <h4 style={{ fontWeight: '600', marginBottom: '5px', color: 'hsl(208, 97%, 12%)' }}>
                         Trusted Service
                       </h4>
-                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '0.95rem' }}>
+                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '1rem' }}>
                         Thousands of satisfied customers worldwide
                       </p>
                     </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                       <h4 style={{ fontWeight: '600', marginBottom: '5px', color: 'hsl(208, 97%, 12%)' }}>
                         Best Prices
                       </h4>
-                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '0.95rem' }}>
+                      <p style={{ color: 'hsl(225, 8%, 42%)', fontSize: '1rem' }}>
                         Competitive pricing with no hidden charges
                       </p>
                     </div>

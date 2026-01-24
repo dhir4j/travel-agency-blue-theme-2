@@ -1,9 +1,9 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import Destinations from '@/components/Destinations'
 import Popular from '@/components/Popular'
-import Package from '@/components/Package'
-import Gallery from '@/components/Gallery'
-import CTA from '@/components/CTA'
+import About from '@/components/About'
+import Blog from '@/components/Blog'
 import Footer from '@/components/Footer'
 import GoTop from '@/components/GoTop'
 
@@ -15,10 +15,10 @@ export default function Home() {
       <main>
         <article>
           <Hero />
+          <Destinations />
           <Popular />
-          <Package />
-          <Gallery />
-          <CTA />
+          <About />
+          <Blog />
         </article>
       </main>
 

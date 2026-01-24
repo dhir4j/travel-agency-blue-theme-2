@@ -1,4 +1,4 @@
-/* Tour Booking Application Form - Modern Design */
+/* Tour Booking Application Form - New Design System */
 
 .applicationHero {
   background-image: url('https://i.postimg.cc/D0c2FLPM/hero-banner.jpg');
@@ -85,7 +85,7 @@
 }
 
 .sectionHeading {
-  color: hsl(208, 97%, 12%);
+  color: hsl(222, 46%, 17%);
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -98,7 +98,7 @@
   content: '';
   width: 4px;
   height: 24px;
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   border-radius: 2px;
 }
 
@@ -147,8 +147,8 @@
 .formSelect:focus,
 .formTextarea:focus {
   outline: none;
-  border-color: hsl(214, 57%, 51%);
-  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  border-color: hsl(180, 98%, 31%);
+  box-shadow: 0 0 0 4px hsla(180, 98%, 31%, 0.1);
 }
 
 .formInput::placeholder {
@@ -180,8 +180,8 @@
 
 .formSelectDate:focus {
   outline: none;
-  border-color: hsl(214, 57%, 51%);
-  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  border-color: hsl(180, 98%, 31%);
+  box-shadow: 0 0 0 4px hsla(180, 98%, 31%, 0.1);
 }
 
 .formActions {
@@ -204,11 +204,11 @@
   height: 20px;
   margin-top: 2px;
   cursor: pointer;
-  accent-color: hsl(214, 57%, 51%);
+  accent-color: hsl(180, 98%, 31%);
 }
 
 .checkboxLabel a {
-  color: hsl(214, 57%, 51%);
+  color: hsl(180, 98%, 31%);
   text-decoration: underline;
 }
 
@@ -223,7 +223,7 @@
   justify-content: center;
   gap: 10px;
   padding: 16px 32px;
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -233,13 +233,13 @@
   letter-spacing: 0.8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.35);
+  box-shadow: 0 4px 16px hsla(180, 98%, 31%, 0.35);
 }
 
 .submitBtn:hover {
-  background: hsl(214, 72%, 33%);
+  background: hsl(219, 20%, 32%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(74, 144, 226, 0.45);
+  box-shadow: 0 6px 24px hsla(180, 98%, 31%, 0.45);
 }
 
 .submitBtn ion-icon {

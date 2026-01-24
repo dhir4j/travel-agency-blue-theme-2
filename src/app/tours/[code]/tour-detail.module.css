@@ -1,11 +1,11 @@
-/* Tour Detail Page - Modern Design */
+/* Tour Detail Page - New Design System */
 
 .heroSection {
   padding: 150px 0 60px;
   background: linear-gradient(to bottom,
-    hsl(214, 57%, 51%) 0%,
-    hsl(214, 57%, 51%) 30%,
-    hsla(214, 57%, 85%, 0.3) 100%
+    hsl(180, 98%, 31%) 0%,
+    hsl(180, 98%, 31%) 30%,
+    hsla(180, 98%, 85%, 0.3) 100%
   );
   margin-top: 0;
   position: relative;
@@ -21,9 +21,9 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 20% 50%, hsla(214, 57%, 51%, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, hsla(197, 100%, 36%, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, hsla(214, 72%, 33%, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, hsla(180, 98%, 31%, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, hsla(47, 98%, 50%, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, hsla(219, 20%, 32%, 0.15) 0%, transparent 50%);
   background-size: 300% 300%;
   animation: gradient-wave 20s ease infinite;
   opacity: 0.8;
@@ -177,12 +177,12 @@
 }
 
 .cardTitle {
-  color: hsl(208, 97%, 12%);
+  color: hsl(222, 46%, 17%);
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 3px solid hsl(214, 57%, 51%);
+  border-bottom: 3px solid hsl(180, 98%, 31%);
   letter-spacing: -0.5px;
 }
 
@@ -196,20 +196,20 @@
   display: flex;
   gap: 16px;
   padding: 20px;
-  background: linear-gradient(135deg, rgba(74, 144, 226, 0.06) 0%, rgba(74, 144, 226, 0.02) 100%);
+  background: linear-gradient(135deg, hsla(180, 98%, 31%, 0.06) 0%, hsla(180, 98%, 31%, 0.02) 100%);
   border-radius: 12px;
-  border-left: 4px solid hsl(214, 57%, 51%);
+  border-left: 4px solid hsl(180, 98%, 31%);
   transition: all 0.3s ease;
 }
 
 .overviewItem:hover {
   transform: translateX(6px);
-  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.15);
+  box-shadow: 0 4px 16px hsla(180, 98%, 31%, 0.15);
 }
 
 .overviewIcon {
   font-size: 28px;
-  color: hsl(214, 57%, 51%);
+  color: hsl(180, 98%, 31%);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -250,12 +250,12 @@
 }
 
 .featureItem:hover {
-  background: rgba(74, 144, 226, 0.06);
+  background: hsla(180, 98%, 31%, 0.06);
   transform: translateX(4px);
 }
 
 .featureIcon {
-  color: hsl(197, 100%, 36%);
+  color: hsl(47, 98%, 50%);
   font-size: 20px;
   flex-shrink: 0;
   margin-top: 2px;
@@ -277,7 +277,7 @@
 
 .hotelIcon {
   font-size: 28px;
-  color: hsl(214, 57%, 51%);
+  color: hsl(180, 98%, 31%);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -303,7 +303,7 @@
 
 .nightsBadge {
   display: inline-block;
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -330,10 +330,10 @@
 .priceDisplay {
   text-align: center;
   padding: 28px 24px;
-  background: linear-gradient(135deg, hsl(214, 57%, 51%) 0%, hsl(214, 72%, 33%) 100%);
+  background: linear-gradient(135deg, hsl(180, 98%, 31%) 0%, hsl(219, 20%, 32%) 100%);
   border-radius: 12px;
   margin-bottom: 24px;
-  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.35);
+  box-shadow: 0 6px 20px hsla(180, 98%, 31%, 0.35);
 }
 
 .priceLabel {
@@ -381,25 +381,25 @@
 }
 
 .primaryButton {
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   color: white;
-  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.35);
+  box-shadow: 0 4px 16px hsla(180, 98%, 31%, 0.35);
 }
 
 .primaryButton:hover {
-  background: hsl(214, 72%, 33%);
+  background: hsl(219, 20%, 32%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(74, 144, 226, 0.45);
+  box-shadow: 0 6px 24px hsla(180, 98%, 31%, 0.45);
 }
 
 .secondaryButton {
   background: transparent;
-  color: hsl(214, 57%, 51%);
-  border: 2px solid hsl(214, 57%, 51%);
+  color: hsl(180, 98%, 31%);
+  border: 2px solid hsl(180, 98%, 31%);
 }
 
 .secondaryButton:hover {
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   color: white;
   transform: translateY(-2px);
 }
@@ -421,15 +421,15 @@
 
 .infoIcon {
   font-size: 22px;
-  color: hsl(214, 57%, 51%);
+  color: hsl(180, 98%, 31%);
 }
 
 .helpCard {
-  background: linear-gradient(135deg, rgba(74, 144, 226, 0.06) 0%, rgba(74, 144, 226, 0.02) 100%);
+  background: linear-gradient(135deg, hsla(180, 98%, 31%, 0.06) 0%, hsla(180, 98%, 31%, 0.02) 100%);
   border-radius: 16px;
   padding: 32px 28px;
   text-align: center;
-  border: 1px solid rgba(74, 144, 226, 0.12);
+  border: 1px solid hsla(180, 98%, 31%, 0.12);
 }
 
 .helpTitle {
@@ -451,7 +451,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: hsl(214, 57%, 51%);
+  background: hsl(180, 98%, 31%);
   color: white;
   padding: 16px 24px;
   border-radius: 50px;
@@ -459,13 +459,13 @@
   font-weight: 600;
   font-size: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.35);
+  box-shadow: 0 4px 16px hsla(180, 98%, 31%, 0.35);
 }
 
 .helpLink:hover {
-  background: hsl(214, 72%, 33%);
+  background: hsl(219, 20%, 32%);
   transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(74, 144, 226, 0.45);
+  box-shadow: 0 6px 24px hsla(180, 98%, 31%, 0.45);
 }
 
 /* Responsive */
